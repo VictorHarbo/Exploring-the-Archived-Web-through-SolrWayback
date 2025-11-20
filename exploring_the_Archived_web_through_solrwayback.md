@@ -33,29 +33,30 @@ authors:
 # Lesson Aims
 When readers have finished this lesson, they will be able to:
 * Set up SolrWayback on their local computer
-* Load data from the archived web into their SolrWayback instance
-* Investigate the archived web through SolrWayback 
+* Load sources from the archived web into their SolrWayback instance
+* Investigate and explore the archived web through SolrWayback 
 
 # Lesson Structure
 
-The lesson is divided into four distinct sections: 
+The lesson is divided into five distinct sections: 
 1. Introduction
 2. Download 
 3. Start up
 4. Indexing
 5. Querying and Visualising
 
-The introduction present some of the existing challenges of working with the archived web and how a tool as SolrWayback can mitigate the entry barrier for historians. The next three sections revolves around installing, starting and getting data loaded into the software. Finally the lesson explores how the archived web can be investigated through SolrWayback. Furthermore this section provides insights into some of the build-in visualisation tools of the software. The lesson makes use of archived websites from the End of Term Webarchive. The lesson only uses a subset of the full collection as the collection from the 2008 collection is more than 15TB of data in total.
+The introduction present some of the existing challenges of working with the archived web and how a tool as SolrWayback can help historians and other scholars from the humanities to work with the archived web as part of their sourcematerial. The next three sections revolves around installing, starting and getting data loaded into the software. Finally the lesson explores how the archived web can be investigated through SolrWayback. Furthermore this section provides insights into some of the build-in visualisation tools of the software. The lesson makes use of archived websites from the End of Term Webarchive. The lesson only uses a subset of the full collection as the collection from the 2008 collection is more than 15TB of data in total.
+
 # Exploring the Archived Web with SolrWayback  
 
 ## Introduction
 
-When institutions such as the Internet Archive (IA), the Royal Danish Library (RDL) or the Bibliothèque nationale de France (BnF) archives the internet, they store the data in [WARC-files](https://en.wikipedia.org/wiki/WARC_(file_format)). WARC files can be daunting to work with if you have not seen them before as they are archival and technical by nature.[^1] Furthermore their primary objective is to secure that the archived web can be saved for posterity. This lesson teaches a method of how to explore WARC files and the archived web as part of research using the tool SolrWayback.
+When institutions such as the Internet Archive (IA), the Royal Danish Library (RDL) or the Bibliothèque nationale de France (BnF) archives the internet, they store the data in [WARC-files](https://en.wikipedia.org/wiki/WARC_(file_format)). WARC files can be daunting to work with if you have not seen them before as they are archival and technical by nature.[^1] Furthermore their primary objective is to secure that the archived web can be saved for posterity therefore they prioritize effective long time preservation above usability. This lesson teaches a method, which can be used to unlock the potential of WARC files as a resource for research. To do this the lesson introduces the Open Source software SolrWayback.
 
-SolrWayback is a search and discovery tool, created to make the archived web search- and viewable in one solution. Other tools for playback do exist, eg. [pywb](https://github.com/webrecorder/pywb). However, no other tool currently provides the search and discovery possibilities which SolrWayback does. Through this software it is possible to search for individual words and phrases throughout your collection. It can also be used as a tool to narrow which parts of a collection you are interested in as part of your research. The software provides multiple ways of exporting subsets of the data for further analysis. [^2]
+SolrWayback is a search and discovery tool, created to make the archived web search- and viewable in one solution. Other tools for playback do exist, eg. [pywb](https://github.com/webrecorder/pywb). However, no other tool currently provides the search and discovery possibilities that SolrWayback does. Through this software it is possible to search for individual words and phrases throughout your collection. It can also be used as a tool to narrow which parts of a collection you are interested in as part of your research. The software provides multiple ways of exporting subsets of the data for further analysis.[^2]
 
 ## Aquire WARC files
-During this lesson you will work with WARC files from the End of Term Web Archive (EOTWA). This webarchive preserves U.S. Government websites when a presidential administration comes to an end. It has done this systematically since 2008. The collections in their archive have grown exponentially between elections.
+During this lesson you will work with WARC files from the End of Term Web Archive (EOTWA). This webarchive preserves U.S. Government websites when a presidential administration comes to an end. the EOTWA has done this systematically since 2008. The collections in their archive have grown exponentially between elections.
 
 | Dataset                | Compressed Size of all WARCs |
 | ---------------------- | ---------------------------- |
@@ -65,7 +66,7 @@ During this lesson you will work with WARC files from the End of Term Web Archiv
 | EOT-2020               | 266.04 TB                    |
 | EOT-2024 (In progress) | 1492.8 TB                    |
 
-Figuring out how to extract WARC files from this archive can be tricky. In this lesson you will download six WARC files from the EOT-2008 collection and they will act as your corpus. Bear in mind that these six WARC files are less than 1 GB in size. This means that your corpus is only a fraction of the total 2008 collection. The WARC files which you should download are available at the following links and are randomly chosen from the EOT-2008 collection:
+Figuring out how to extract WARC files from this archive can be tricky as their documentation is technical. In this lesson you will download six WARC files from the EOT-2008 collection and these files will act as your corpus. Bear in mind that these six WARC files are less than 1 GB in size. This means that the corpus you are working on here is only a fraction of the total 2008 collection. The WARC files which you should download are available at the following links and are randomly chosen from the EOT-2008 collection:
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060129-00186-dp01.cdlib.org.warc.gz
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060157-00299-dp01.cdlib.org.warc.gz
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060327-01089-dp01.cdlib.org.warc.gz
@@ -73,12 +74,13 @@ Figuring out how to extract WARC files from this archive can be tricky. In this 
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060400-01090-dp01.cdlib.org.warc.gz
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060442-00040-dp01.cdlib.org.warc.gz
 
-For now either save these files in their own directory or let them stay in your downloads folder. You need to be able to find them again, when we get to the section of this lesson which handles indexing.
+For now either save these files in their own directory or let them stay in your downloads folder. You need to be able to find them again, when you get to the section of the lesson that handles indexing.
 
 ## Download
-To get started with SolrWayback, the first thing you need to do is downloading the software from the SolrWayback Github page. The software can be installed in multiple ways, in this lesson you will install it through the bundle release version. To get started navigate to the [release page](https://github.com/netarchivesuite/solrwayback/releases) of SolrWayback and download version 5.2.1 (This was the newest version when this lesson was written. This guide will most likely work for newer versions as well).
+To get started with SolrWayback, the first thing you need to do is to download the software from the SolrWayback Github page. The software can be installed in multiple ways, however in this lesson you will install it through the bundle release version, which is the most common way. To get started navigate to the [release page](https://github.com/netarchivesuite/solrwayback/releases) of SolrWayback and download version 5.2.1 (This was the newest version when this lesson was written. This guide will most likely work for newer versions as well).
 
-When you've downloaded the correct version please unzip the file, where you want it on your computer. The unzipped directory will have the name: `solrwayback_package_5.2.1`. Inside the directory a folder named properties exists. Please copy the two files from inside this folder to your home directory. On a Linux/Mac this directory is called `/Users/yourUsername` and on windows it is located at `C:\Users\yourUsername\`. You are now ready to start SolrWayback and index your first WARC files. The two next sections of this lesson are operation system dependent, so they will contain separate sections for Linux/Mac and Windows respectively.
+When you've downloaded the correct version please unzip the file, where you want it on your computer. The unzipped directory will have the name: `solrwayback_package_5.2.1`. Inside the directory a folder named properties exists. Please copy the two files from inside this folder to your home directory. On a Linux/Mac this directory is called `/Users/yourUsername` and on windows it is located at `C:\Users\yourUsername\`. You are now ready to start SolrWayback and index your first WARC files. The next sections of this lesson are operation system dependent, so they will contain separate sections for Linux/Mac and Windows respectively.
+
 ## Start up
 With the SolrWayback bundle downloaded and having moved your properties to your home directory you are ready to start the software. This is done through a terminal by issuing two commands. Please follow the section below according to your OS.
 
@@ -96,7 +98,13 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
     </ul>
   </div>
 </div>
-Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. In the search bar you enter the value `*:*`, which translates to a query for everything that has been indexed in your SolrWayback installation. Currently this should return zero results as you have not indexed your WARC files yet. However, that is the next part of the lesson.  
+Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the frontpage of the apllication which looks like this: 
+
+{% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %
+
+<!-- TODO: rewrite this short section as it does not helt very much-->
+In the search bar you enter the value `*:*`, which translates to a query for everything that has been indexed in your SolrWayback installation. Currently this should return zero results as you have not indexed your WARC files yet. However, that is the next part of the lesson.  
+
 ## Indexing
 SolrWayback is build with a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, which you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package`. It is important to know that when you have indexed the WARC files, they cannot be moved from their current location as this will destroy the playback of the files until a new index has been built.
 <div style="display: flex; gap: 20px;">
