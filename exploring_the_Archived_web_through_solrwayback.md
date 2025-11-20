@@ -82,7 +82,7 @@ To get started with SolrWayback, the first thing you need to do is to download t
 When you've downloaded the correct version please unzip the file, where you want it on your computer. The unzipped directory will have the name: `solrwayback_package_5.2.1`. Inside the directory a folder named properties exists. Please copy the two files from inside this folder to your home directory. On a Linux/Mac this directory is called `/Users/yourUsername` and on windows it is located at `C:\Users\yourUsername\`. You are now ready to start SolrWayback and index your first WARC files. The next sections of this lesson are operation system dependent, so they will contain separate sections for Linux/Mac and Windows respectively.
 
 ## Start up
-With the SolrWayback bundle downloaded and having moved your properties to your home directory you are ready to start the software. This is done through a terminal by issuing two commands. Please follow the section below according to your OS.
+With the SolrWayback bundle downloaded and having moved your properties to your home directory you are ready to start the software. This is done through a terminal by issuing two commands. Please follow the section below according to your OS. The two commands that you need to do starts the two parts of the application. The first command starts the webserver that is included in the application and the second command starts the search engine in the application.
 
 <div style="display: flex; gap: 20px;">
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
@@ -98,27 +98,33 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
     </ul>
   </div>
 </div>
+
 Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the frontpage of the apllication which looks like this: 
 
 ![SolrWayback frontpage](./img/solrwayback_frontpage.png)
-{% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %}
+<!-- {% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %} -->
 
-<!-- TODO: rewrite this short section as it does not helt very much-->
-In the search bar you enter the value `*:*`, which translates to a query for everything that has been indexed in your SolrWayback installation. Currently this should return zero results as you have not indexed your WARC files yet. However, that is the next part of the lesson.  
+You have now started the application succesfully and are ready to make the WARC files from the EOTWA searchable in the system.
 
 ## Indexing
-SolrWayback is build with a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, which you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package`. It is important to know that when you have indexed the WARC files, they cannot be moved from their current location as this will destroy the playback of the files until a new index has been built.
+SolrWayback is build with a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, which you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package_5.2.1`. It is important to know that when you have indexed the WARC files, they cannot be moved from their current location as moving them afterwards will destroy the playback of the files until a new index has been built. The following is to be done in your Command Line Interface (e.g. Terminal or Powershell).
+
 <div style="display: flex; gap: 20px;">
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
     <h3>Linux/Mac</h3>
-    <p>To index your WARC files from the directory <code>indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following command in your terminal: <code>THREADS=2 ./warc-indexer.sh warcs1/*</code>.</p> 
+    <p>To index your WARC files from the directory <code>solrwayback_package_5.2.1/indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following command in your terminal: <code>THREADS=2 ./warc-indexer.sh warcs1/*</code>.</p> 
   </div>
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
     <h3>Windows</h3>
-    <p>To index your WARC files from the directory <code>indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following bat-file in your terminal: <code>batch_warcs1_folder.bat</code></p>
+    <p>To index your WARC files from the directory <code>solrwayback_package_5.2.1/indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following bat-file in your terminal: <code>batch_warcs1_folder.bat</code></p>
+    <p>NOTE: On Windows it is very important that you follow the directions above explicitly and moves into the directory before you run the <code>.bat</code>-file.</p>
   </div>
 </div>
-This will start indexing all documents in the warcs1 folder. You will see a lot of output in your terminal. These are logs on how the indexing is processing. When the indexing has finished your terminal will return to an interactive state and you should be able to see the indexed documents in the SolrWayback web interface when you have performed a new query. 
+
+![Indexing on a mac](./img/mac_indexing.png)
+<!-- {% include figure.html filename="./img/mac_indexing.png" caption="Terminal output when indexing on a mac" %} -->
+
+This will start indexing all documents in the warcs1 folder. You might see a lot of output in your terminal. These are logs on how the indexing is processing and are expected. When the indexing has finished your terminal will return to an interactive state, repesented by a `$` and you should be able to see the indexed documents in the SolrWayback web interface. To validate that the documents have been indexed, you can go to the application at the URL: http://localhost:8080/solrwayback/ and type `*:*` in the search box. This is a wildcard query that fetches all sources in the application.
 
 <div class="alert alert-warning">
  When querying again, the query <code>*:*</code> has been cached by the application as containing no results. This happens because you tried that specific query before you had indexed any WARC files. To see how many documents you have in your index add a space to the end of the query: <code>*:* </code>
