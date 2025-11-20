@@ -100,6 +100,7 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
 </div>
 Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the frontpage of the apllication which looks like this: 
 
+![SolrWayback frontpage](./img/solrwayback_frontpage.png)
 {% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %}
 
 <!-- TODO: rewrite this short section as it does not helt very much-->
