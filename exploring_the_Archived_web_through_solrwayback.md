@@ -100,7 +100,7 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
 </div>
 Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the frontpage of the apllication which looks like this: 
 
-{% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %
+{% include figure.html filename="./img/solrwayback_frontpage.png" caption="SolrWayback frontpage" %}
 
 <!-- TODO: rewrite this short section as it does not helt very much-->
 In the search bar you enter the value `*:*`, which translates to a query for everything that has been indexed in your SolrWayback installation. Currently this should return zero results as you have not indexed your WARC files yet. However, that is the next part of the lesson.  
