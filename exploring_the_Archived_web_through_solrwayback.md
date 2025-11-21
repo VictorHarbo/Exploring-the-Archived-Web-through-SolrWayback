@@ -124,14 +124,21 @@ SolrWayback is build with a search engine named Solr. To make your WARC files av
 ![Indexing on a mac](./img/mac_indexing.png)
 <!-- {% include figure.html filename="./img/mac_indexing.png" caption="Terminal output when indexing on a mac" %} -->
 
-This will start indexing all documents in the warcs1 folder. You might see a lot of output in your terminal. These are logs on how the indexing is processing and are expected. When the indexing has finished your terminal will return to an interactive state, repesented by a `$` and you should be able to see the indexed documents in the SolrWayback web interface. To validate that the documents have been indexed, you can go to the application at the URL: http://localhost:8080/solrwayback/ and type `*:*` in the search box. This is a wildcard query that fetches all sources in the application.
+This will start indexing all documents in the warcs1 folder. You shoud see some output in your terminal. This is information on how the indexing is processing and are expected. When the indexing has finished your terminal will return to an interactive state, repesented by a `$` and now you should be able to see the indexed documents in the SolrWayback web interface. To validate that the documents have been indexed, you can go to the application at the URL: http://localhost:8080/solrwayback/ and type `*:*` in the search box. This is a wildcard query that fetches all sources in the application. This should return 6.031 results.
 
-<div class="alert alert-warning">
- When querying again, the query <code>*:*</code> has been cached by the application as containing no results. This happens because you tried that specific query before you had indexed any WARC files. To see how many documents you have in your index add a space to the end of the query: <code>*:* </code>
-</div>
+You have now successfully indexed your WARC files into SolrWayback and can now begin exploring their contents through the software. If you want to add other WARC files to SolrWayback after you have finished this lesson, you can either place them in the included `warcs1` or `warcs2` folders and then run the related indexing command again.
 
-You have now successfully indexed your WARC files into SolrWayback and can now begin exploring their contents through the software.
 ## Querying and Visualising
+You are now ready to start exploring your collection and discover interesting sources related to the US Election 2008. When examining your `*:*`-query from above you get some information to the left of the screen. These are facets that give you an overview of content in your collection and they can be used to tailor your search. When a facet os clicked, it will be applied to your query.
+
+![SolrWayback facets](./img/solrwayback_facets.png)
+<!-- {% include figure.html filename="./img/solrwayback_facets.png" caption="SolrWayback facets" %} -->
+
+If for instance you are interested in analysing politicians views on immigration a starting point could be a query for the word `immigration`. In your small subset of the corpus, this query provides you with 80 results. If you press the top result, comming from the URL [http://bilirakis.house.gov...](http://localhost:8080/solrwayback/services/web/20090514060646/http://bilirakis.house.gov/index.php?option=com_content&task=view&id=193&Itemid=132) you are presented with the archived webpage. This webpage was harvested at the 14th of May 2009. When examining the Bilirakis website from 2009. The first thing that comes to mind is that the site is not that pretty. To understand why the page is presented like this we need to think of how the web and therefore also the archived web is constructed in the first place. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different. (TODO: reference to Brügger 2018, chapter 2) This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the ressources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand here. With this said, the replay of the Bilirakis webpage might be better if you had all or more material downloaded from EOTWA.  
+
+
+![Playback of Bilirakis website from 2009](./img/playback_from_2009.png)
+<!-- {% include figure.html filename="./img/playback_from_2009.png" caption="Playback of Bilirakis website from 2009" %} -->
 
 
 ## Conclusion
