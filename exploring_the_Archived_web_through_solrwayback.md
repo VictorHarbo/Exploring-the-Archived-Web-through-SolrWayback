@@ -132,12 +132,7 @@ This will start indexing of all documents in the warcs1 folder. You should see s
 You have now successfully indexed your WARC files into SolrWayback and can begin exploring their contents through the software. If you want to add other WARC files to SolrWayback after you have finished this lesson, you can place them in either of the included `warcs1` or `warcs2` folders and then run the indexing command again.
 
 ## Querying and Visualising
-You are now ready to start exploring your collection and discover interesting sources related to the US Election 2008. When examining your `*:*`-query from above you get some information to the left of the screen. These are facets that give you an overview of content in your collection and they can be used to tailor your search. When a facet is clicked, it will be applied to your query.
-
-![Figure 3: SolrWayback facets](./img/3_solrwayback_facets.png)
-<!-- {% include figure.html filename="./img/3_solrwayback_facets.png" caption="Figure 3: SolrWayback facets" %} -->
-
-### Searching
+You are now ready to start exploring your collection and discover interesting sources related to the End of Term collection from 2008. Many questions can be answered with sources from this collection. Throughout the next session some examples will be introduced. These examples have been chosen as the subset of the collection you are exploring in this lesson contain relevant documents.
 
 If for instance you are interested in analysing politicians views on immigration a starting point could be a query for the word `immigration`. In your small subset of the overall corpus, this query provides you with 80 results. If you press the top result, comming from the URL [http://bilirakis.house.gov...](http://localhost:8080/solrwayback/services/web/20090514060646/http://bilirakis.house.gov/index.php?option=com_content&task=view&id=193&Itemid=132) you are presented with a replayed version of the archived webpage.
 
@@ -171,10 +166,19 @@ Throughout this lesson you are working with a small subset of a bigger collectio
 
 The `ULR Search`-button contains another functionality which is important for you to know about as part of having search introduced in this program. The use case for this button is the following, very common, situation. You have a collection of material and are interested in finding one special web page located at a specific URL. A case for this kind of use in your small collection could be to find the webpage of congress woman Virginia Foxx and you know that her web page have been archived from the specific URL: http://foxx.house.gov/index.cfm?sectionid=102&sectiontree=&pageNum=51. If you copy this URL directly into the search field and try to search for it, no results will be available. If however you tick the `URL Search`-button and redo your search, a result will be found. Why is this so you may ask? URLs often contain special characters as '&' and '#'. When you ticked the `URL Search`-box, you instructed the software to handle these characters directly as part of the URL and therefore you get a valid result in this case.  
 
+TODO: write sum-up of this section
 
-TODO: Introduction to URL search
+### Relationship between search and facets
 
-TODO: Introduction to facets and the order of operation in the software. 
+Until now, the lesson has been focused on how to search through the search bar. Another step in the search process is to apply facets to filter unwanted material away.
+
+If you do a new `*:*`-query and then have a look at the resulting page. Here you get some useful information on the left of the screen. These are facets that give you an overview of content in your collection and they can be used to tailor your search. When a facet is clicked, it will be applied to your query and only documents with that value in the faceted field will be included in the result. 
+
+![Figure 3: SolrWayback facets](./img/3_solrwayback_facets.png) TODO: Give this the right caption and file name
+<!-- {% include figure.html filename="./img/3_solrwayback_facets.png" caption="Figure 3: SolrWayback facets" %} TODO: Give this the right caption and file name -->
+
+Facets can also be used to give an immediate overview of how the material in the collection is scattered on different domains, content types or crawl years etc. One important thing to mention in relation to facets is the relationship between entries in the search bar and the application of facets. Facets need to be applied last as a change to the input in the search box resets the query and removes any applied facets.
+
 
 TODO: Short introduction to the navigation history feature
 
