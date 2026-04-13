@@ -195,11 +195,9 @@ Lets use the Bilirakis website for a thought example of what would happen. Say y
 
 The toolbar provides a human readable version of the harvest date and a quick overview of how much material us available on the given page. The time of collection can either be extracted directly from the URL or read in the toolbar. Remember to keep in mind that this timestamp changes when you click a link as all sources in the archive have been collected individually. This resembles traditional library frameworks, just as the searching capabilities above did (TODO: Reference Hockx-Yu, 2014 and Hegarty 2022, p. 447). 
 
+When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources. (TODO: Reference Putnam 2016 and Strandgaard Jensen 2021) SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated. (TODO: Reference Johnston 2026) The Navigation History button is available below the search box on the front page of the application.  
 
-
-
-TODO: Short introduction to the navigation history feature
-
+### Tools for visualisation
 TODO: Toolbox introduction
 TODO: Visualisation tools 
 
