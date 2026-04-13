@@ -197,7 +197,10 @@ The toolbar provides a human readable version of the harvest date and a quick ov
 
 When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources. (TODO: Reference Putnam 2016 and Strandgaard Jensen 2021) SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated. (TODO: Reference Johnston 2026) The Navigation History button is available below the search box on the front page of the application.  
 
+TODO: Add image of where to find navigation history download button
+
 ### Tools for visualisation
+
 TODO: Toolbox introduction
 TODO: Visualisation tools 
 
