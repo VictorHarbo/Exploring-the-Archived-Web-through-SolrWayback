@@ -104,8 +104,8 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
 
 Now you have SolrWayback running. To verify that it runs you can access the program in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this: 
 
-![Figure 1: SolrWayback frontpage](./img/1_solrwayback_frontpage.png)
-<!-- {% include figure.html filename="./img/1_solrwayback_frontpage.png" caption="Figure 1: SolrWayback frontpage" %} -->
+![Figure 1: SolrWayback front page](./img/1_solrwayback_frontpage.png)
+<!-- {% include figure.html filename="./img/1_solrwayback_frontpage.png" caption="Figure 1: SolrWayback front page" %} -->
 
 You have now started the application successfully and are ready to make the WARC files from the EOTWA searchable in the system.
 
