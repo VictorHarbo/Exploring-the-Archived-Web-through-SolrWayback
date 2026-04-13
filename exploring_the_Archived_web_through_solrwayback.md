@@ -57,7 +57,7 @@ When institutions such as the Internet Archive (IA), the Royal Danish Library (R
 
 SolrWayback is a search and discovery tool, created to make the archived web search- and viewable in one solution. Other tools for playback do exist, eg. [pywb](https://github.com/webrecorder/pywb). However, no other tool currently provides the search and discovery possibilities that SolrWayback does. Through this software it is possible to search for individual words and phrases throughout your collection. It can also be used as a tool to narrow which parts of a collection you are interested in as part of your research. The software provides multiple ways of exporting subsets of the data for further analysis.[^2]
 
-## Aquire WARC files
+## Acquire WARC files
 During this lesson you will work with WARC files from the End of Term Web Archive (EOTWA). This web archive preserves U.S. Government websites when a presidential administration comes to an end. the EOTWA has done this systematically since 2008. The collections in their archive have grown exponentially between elections.
 
 | Dataset                | Compressed Size of all WARCs |
@@ -102,7 +102,7 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
   </div>
 </div>
 
-Now you have SolrWayback running. To verify that it runs you can access the program in your webbrowser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the frontpage of the apllication which looks like this: 
+Now you have SolrWayback running. To verify that it runs you can access the program in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this: 
 
 ![Figure 1: SolrWayback frontpage](./img/1_solrwayback_frontpage.png)
 <!-- {% include figure.html filename="./img/1_solrwayback_frontpage.png" caption="Figure 1: SolrWayback frontpage" %} -->
@@ -134,7 +134,7 @@ You have now successfully indexed your WARC files into SolrWayback and can begin
 ## Querying, navigating and visualising
 You are now ready to start exploring your collection and discover interesting sources related to the End of Term collection from 2008. Many questions can be answered with sources from this collection. Throughout the next session some examples will be introduced. These examples have been chosen as the subset of the collection you are exploring in this lesson contain relevant documents.
 
-If for instance you are interested in analysing politicians views on immigration a starting point could be a query for the word `immigration`. In your small subset of the overall corpus, this query provides you with 80 results. If you press the top result, comming from the URL [http://bilirakis.house.gov...](http://localhost:8080/solrwayback/services/web/20090514060646/http://bilirakis.house.gov/index.php?option=com_content&task=view&id=193&Itemid=132) you are presented with a replayed version of the archived webpage.
+If for instance you are interested in analysing politicians views on immigration a starting point could be a query for the word `immigration`. In your small subset of the overall corpus, this query provides you with 80 results. If you press the top result, coming from the URL [http://bilirakis.house.gov...](http://localhost:8080/solrwayback/services/web/20090514060646/http://bilirakis.house.gov/index.php?option=com_content&task=view&id=193&Itemid=132) you are presented with a replayed version of the archived webpage.
 
 This webpage was harvested at the 14th of May 2009. When examining the Bilirakis website from 2009. The first thing that comes to mind is that the site is not very good looking. To understand why the page is presented like this we need to think of how the web and therefore also the archived web is constructed in the first place. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different. (TODO: reference to Brügger 2018, chapter 2) This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the resources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand through this lesson. In other words, the replay of the Bilirakis webpage might almost certainly be better if you had all or more material downloaded from the EOTWA.  
 
@@ -200,6 +200,34 @@ When working with vast amounts of sources, which is often the case when working 
 TODO: Add image of where to find navigation history download button
 
 ### Tools for visualisation
+
+Collections of archived web material are often extremely big. It is generally thought that  access to web archive collections should include access to tools that help overcome the amount of material. (TODO: Reference hockx-yu 2014, Winthers et al fra DD paper, Ruest et al.) SolrWayback provides build in tools for distant reading of archived web material. These tools can be found in the toolbox highlighted below.
+
+TODO: Insert image of toolbox button
+
+The following section provides a brief overview of how these tools can be used to explore your collection. To make sure you can follow along, please make a query for everything: `*:*`. Now press the toolbar icon and you will be given the following screen:
+
+TODO: Insert image of toolbox
+
+The toolbox currently contain five different tools:
+- Wordcloud
+- Link Graph
+- Domain stats
+- Link graph Gephi export
+- Ngram Netarchive
+
+All input boxes contain an example text of kb.dk. In all steps below, this needs to be changed to a domain that is available in your small corpus. Most the time the lesson will use nasa.gov as the example here. The wordcloud tool provides the possibility of creating domain wide wordclouds. These can be used to gain an overview of what is the most used words across a specific domain. To see an example of how this looks enter `nasa.gov` in the field to the left and press `Create wordcloud`. This compiles a wordcloud of the most used terms across the nasa.gov domain in you collection.
+
+TODO: Insert image of nasa.gov wordcloud
+
+The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web. (TODO: Reference Brügger 2013: Historical Network Analysis of the Web) Please press the `Link Graph`-tool in the top of the article and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
+
+TODO: Insert image of linkgraph
+
+What you see here are the domains, that are linked somewhere to somewhere from webpages on nasa.gov.  
+
+
+
 
 TODO: Toolbox introduction
 TODO: Visualisation tools 
