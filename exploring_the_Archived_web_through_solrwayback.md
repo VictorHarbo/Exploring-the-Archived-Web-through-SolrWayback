@@ -224,18 +224,27 @@ The next tool, the link graph tool is central if you want to understand or inves
 
 TODO: Insert image of linkgraph
 
-What you see here are the domains, that are linked to from webpages on nasa.gov.  
+What you see here are the domains, that are linked to from webpages on nasa.gov. It is also possible to produce a graph of ingoing links, which is often a more complex task, but because SolrWayback already has this information available through its index the graph can be constructed easily. To produce such a graph you toggle the radio button to ingoing and press generate again. However, for nasa.gov in your collection, this produces a meaningless graph with no edges. If you change the domain from nasa.gov to wikipedia.org you can get a feel of how a graph of ingoing links look. This link graph tool provides an accessible entrypoint to getting started with link analysis of archived web material. For more complex link analysis the tool Link graph Gephi export can be used to export needed data for complex analysis with the network analysis tool Gephi. For an introduction to network analysis in general see Ladd et al. 2017. (TODO: Reference Ladd et all 2017: Programming Historian)
 
+Next in line is the domain stats tool. This tool can be used to visualise statistics about a single domain at different levels of granularity. To get an understanding of how this tool works enter nasa.gov in the input box. The X-axis defaults to the years 1998 to 2027. This can be changed in the two timeframe boxes. The scale of the X-axis can also be customised down to daily intervals. When you press the generate button a combined line chart appears. This combined chart visualises four distinct counts: Amount of pages, ingoing links, average page size in characters, and size in kilobytes. In this combined view it is possible to remove individual line charts by clicking their respective colors at the top of the visualisation. It is also possible to render all four charts individually by pressing the `Show Individual Charts`-button. The domain statistics can be used to investigate temporal changes in the archived material. Your subset from the total collection are all collected on the same day in 2009 and therefore there is not enough datapoints to create a telling visualisation. An example of how the graph could look with more data is shown here.
 
+TODO: Insert domain stats for nasa.gov from webchild corpus. 
 
+The last tool in the toolbox is the Ngram Netarchive tool. This tool can be used to discover and investigate how frequently a term appears in the collection over time. Multiple terms can be shown on the same graph at once by searching for them individually. For instance, staying in the space program example, you can add terms such as `nasa`, `space`, and `astronaut` to the visualisation and if you then had material from multiple years, the visualisation would represent how often the words were present in the collection. 
 
-TODO: Toolbox introduction
-TODO: Visualisation tools 
+TODO: Insert Ngram figure
 
+This type of visualisation can be used to investigate trends in usage of different words. One important aspect of all of these tools to keep in mind is what they can be used to investigate. Collections from web archives are very strictly bound to the collecting practices of holding institutions such as the Internet Archive or the Royal Danish Library. This means that spikes in these visualisations needs to be treated with care as they can just as easily be a product of excessive collecting of material as markers of change.
 
+The functionality of the toolbox can support you in initial distant readings of material in your collection. For further distant reading or quantitative approaches researchers often export data from SolrWayback.(TODO: Reference Kurzmeier 2025) Data can be exported in many formats from the front page of the application.
 
+## Conclusion: A New World of Source Material Emerges
 
-## Conclusion
+This lesson has introduced a highly specific application for exploring archived web material. You have briefly been introduced to the storage format WARC, which stand as the foundation for web archiving systems. You've successfully installed SolrWayback on your local computer and have made a very small subset of material from the End of Term Web Archive available for discovery in the software. The material used as example in the lesson is freely accessible and a more covering subset can be acquired at the EOTWA itself.
+
+Through SolrWayback it becomes possible to perform complex searches in material from web archives, that are otherwise often only available if you know the precise URL you are looking for. This lesson has taught you how to perform complex queries for material and navigate the archived web, which is quite often a temporal mess. 
+
+SolrWayback includes a toolbox of tools for initial distant reading of archived web collections. This toolbox can be used as a starting point for computational analysis of reborn digital sources. These tools are build for larger collections that span archives of material collected on different dates as most of the tools visualise changes in material over time. With SolrWayback in hand you are prepared to explore larger collections of archived web material.
 
 
 ## Literature
