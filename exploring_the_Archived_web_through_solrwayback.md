@@ -166,7 +166,7 @@ Throughout this lesson you are working with a small subset of a bigger collectio
 
 The `URL Search` button contains another functionality which is important for you to know about. The use case for this button is the following, very common, situation. You have a collection of material and are interested in finding one special web page located at a specific URL. A case for this kind of use in your small collection could be to find the webpage of congress woman Virginia Foxx and you know that her web page have been archived from the specific URL: http://foxx.house.gov/index.cfm?sectionid=102&sectiontree=&pageNum=51. If you copy this URL directly into the search field and try to search for it, no results will be available. If however you tick the `URL Search` button and redo your search, you will find a result. Why is this so you may ask? URLs often contain special characters as '&' and '#'. When you ticked the `URL Search`-box, you instructed the software to handle these characters directly as part of the URL and therefore you get a valid result in this case.  
 
-TODO: write sum-up of this section
+You have now been introduced to two toggle buttons that sit just below the search bar. The `Grouped search` button is particularly useful when working with large collections where identical documents have been archived multiple times, as it de-duplicates results by URL. The `URL Search` button solves a practical problem that arises frequently in web archive research: searching for a specific URL that contains special characters. Keeping both of these buttons in mind will help you retrieve the results you are actually looking for as you work your way through a collection of material from the archived web.
 
 ### Relationship Between Search and Facets
 
