@@ -136,7 +136,7 @@ You are now ready to start exploring your collection and discover interesting so
 
 If for instance you are interested in analysing politicians views on immigration a starting point could be a query for the word `immigration`. In your small subset of the overall corpus, this query provides you with 80 results. If you press the top result, coming from the URL [http://bilirakis.house.gov...](http://localhost:8080/solrwayback/services/web/20090514060646/http://bilirakis.house.gov/index.php?option=com_content&task=view&id=193&Itemid=132) you are presented with a replayed version of the archived webpage.
 
-This webpage was harvested on 14 May 2009. When you first view the Bilirakis website from 2009, it appears visually incomplete. To understand why, consider how the web and by extension the archived web is structured. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different. (TODO: reference to Brügger 2018, chapter 2) This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the resources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand through this lesson. The replay would almost certainly be more complete with a larger portion of the EOTWA collection.  
+This webpage was harvested on 14 May 2009. When you first view the Bilirakis website from 2009, it appears visually incomplete. To understand why, consider how the web and by extension the archived web is structured. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different.[^3] This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the resources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand through this lesson. The replay would almost certainly be more complete with a larger portion of the EOTWA collection.  
 
 ![Figure 3: Playback of Bilirakis website from 2009](./img/3_playback_from_2009.png)
 <!-- {% include figure.html filename="./img/3_playback_from_2009.png" caption="Figure 3: Playback of Bilirakis website from 2009" %} -->
@@ -162,7 +162,7 @@ When you press this button, a list of available fields appears. Here you see fie
 ### Buttons Below the Search Bar
 You have now learned the basics of how the search field functions. As you will see throughout the rest of this lesson, SolrWayback contains many ways to navigate the archived web as a source. Right below the search bar two important toggle buttons are available. The two toggles presented here are `Grouped search` and `URL search`. 
 
-Throughout this lesson you are working with a small subset of a bigger collection. Often, when working with the archived web you will be sifting through not only millions of documents, but also multiple copies of identical documents as archiving technologies archive all URLs even though an identical copy of the source already exist in the collection. [TODO: Reference Gomes et al.] The grouped search functionality in SolrWayback collapses results by URL into one when ticked. This can be very useful when exploring collections of more sources. 
+Throughout this lesson you are working with a small subset of a bigger collection. Often, when working with the archived web you will be sifting through not only millions of documents, but also multiple copies of identical documents as archiving technologies archive all URLs even though an identical copy of the source already exist in the collection.[^4] The grouped search functionality in SolrWayback collapses results by URL into one when ticked. This can be very useful when exploring collections of more sources. 
 
 The `URL Search` button contains another functionality which is important for you to know about. The use case for this button is the following, very common, situation. You have a collection of material and are interested in finding one special web page located at a specific URL. A case for this kind of use in your small collection could be to find the webpage of congress woman Virginia Foxx and you know that her web page have been archived from the specific URL: http://foxx.house.gov/index.cfm?sectionid=102&sectiontree=&pageNum=51. If you copy this URL directly into the search field and try to search for it, no results will be available. If however you tick the `URL Search` button and redo your search, you will find a result. Why is this so you may ask? URLs often contain special characters as '&' and '#'. When you ticked the `URL Search`-box, you instructed the software to handle these characters directly as part of the URL and therefore you get a valid result in this case.  
 
@@ -181,9 +181,9 @@ Facets can also be used to give an immediate overview of how the material in the
 
 ### Navigation
 
-Moving from search to reading and navigation of archived webpages can seem simple at first but there are some aspects of navigation that needs to be addressed. Any result from a search can be clicked and will then open a playback version of the archived webpage in a new browser window. When reading an archived webpage, keep the web's inherent media format in mind. Material from the archived web is characterised as reborn digital material and the archived material most often differ from the live version of the source (TODO: Reference Brügger 2018, s. 22-23 and Maemura 2023 p. 8). The archived web (and the live web) is fragmented by nature. This fragmentation plays an important part when you investigate an archived webpage. The page you are looking at is most likely constructed from multiple resources, eg. text, images, files. The resources making up a replayed page may have been harvested at different times and stitched together to appear as a coherent source. (TODO: Reference Berlin et al.) This is not a SolrWayback specific caveat but a general choice in wayback centred playback solutions. 
+Moving from search to reading and navigation of archived webpages can seem simple at first but there are some aspects of navigation that needs to be addressed. Any result from a search can be clicked and will then open a playback version of the archived webpage in a new browser window. When reading an archived webpage, keep the web's inherent media format in mind. Material from the archived web is characterised as reborn digital material and the archived material most often differ from the live version of the source.[^5] The archived web (and the live web) is fragmented by nature. This fragmentation plays an important part when you investigate an archived webpage. The page you are looking at is most likely constructed from multiple resources, eg. text, images, files. The resources making up a replayed page may have been harvested at different times and stitched together to appear as a coherent source.[^6] This is not a SolrWayback specific caveat but a general choice in wayback centred playback solutions. 
 
-The archived website can be navigated in the same manner as a live website. Live and archived versions of web material are strongly dependent on hyperlinks for navigation. (TODO: Reference Brügger 2018 p. 28-30) Navigation on the live web is however a bit more simple than navigation through archived links. In a web archive, clicking a link from an opened document can make the temporal situation shift. These shifts in temporality are rarely visualised for you as user of the software and because browsing the live web is second nature, you likely click through multiple links per day without thinking about it. Clicking a link in the playback view of SolrWayback works in the same way but you need to remember that the temporal context might change behind your back. To make this behaviour of navigation more visible a textual example follows: Imagine that you are interested in the website of congressman Gus Bilirakis used as an example above which has been archived on 14 May 2009. In a complete version of the archive multiple copies of this front-page had probably existed. When researching the web page you would probably click on multiple links such as the 'Newsroom' or 'Issues' links. The playback software would then redirect you to a version of the linked website that has a harvest time closest to the one of the current page. In your small subset of material from the EOTWA this is very hard to show as you do not have easy access to archived versions of linked pages. 
+The archived website can be navigated in the same manner as a live website. Live and archived versions of web material are strongly dependent on hyperlinks for navigation.[^7] Navigation on the live web is however a bit more simple than navigation through archived links. In a web archive, clicking a link from an opened document can make the temporal situation shift. These shifts in temporality are rarely visualised for you as user of the software and because browsing the live web is second nature, you likely click through multiple links per day without thinking about it. Clicking a link in the playback view of SolrWayback works in the same way but you need to remember that the temporal context might change behind your back. To make this behaviour of navigation more visible a textual example follows: Imagine that you are interested in the website of congressman Gus Bilirakis used as an example above which has been archived on 14 May 2009. In a complete version of the archive multiple copies of this front-page had probably existed. When researching the web page you would probably click on multiple links such as the 'Newsroom' or 'Issues' links. The playback software would then redirect you to a version of the linked website that has a harvest time closest to the one of the current page. In your small subset of material from the EOTWA this is very hard to show as you do not have easy access to archived versions of linked pages. 
 
 Let's use the Bilirakis website for a thought example of what would happen. Say you were interested in  the congressman's view on education. You would then probably be interested in following the link to his webpage on education. When you click this link you would be presented with a version of the webpage located at this [address](http://bilirakis.house.gov/index.php?option=com_content&task=view&id=187&Itemid=128). Another thing might also have happened, without you noticing it. You started from a page that had been archived on 14 May 2009 but you might, without knowing, have taken a time machine when you clicked the link. The link you clicked on might not have been collected on 14 May 2009. It might not have been collected in 2009 at all. If this is the case and the archive has a version of the requested page from 2008, 2010 or 2015 the playback engine in the software would show the version of the site that is closest in time without telling you that your temporal context has shifted. In SolrWayback and other Wayback based web archives such as the Internet Archive the harvest date can always be extracted from the archival URL. Returning to the Bilirakis front page in your SolrWayback collection which should be available at the following [URL](http://localhost:8080/solrwayback/services/web/20090514061634/http://bilirakis.house.gov/index.php?option=com_search&searchword=index.php?option=com_search&searchword=The%20Congenital%20Heart%20Futures%20Act&submit=Search&searchphrase=any&ordering=newest). The `/web/20090514061634`-part of the URL would also be present if you had accessed the source in the Internet Archive or any other web archive. The 14-digit number is a timestamp in the format YYYYMMDDHHMMSS. When you click a link in SolrWayback this date changes to the version closest to the URL you came from. In SolrWayback harvest date information can also be read in the toolbar accessible in the top left corner of the playback view. 
 
@@ -193,15 +193,15 @@ Let's use the Bilirakis website for a thought example of what would happen. Say 
 ![Figure 8: Toolbar content](./img/8_toolbar_content.png)
 <!-- {% include figure.html filename="./img/8_toolbar_content.png" caption="Figure 8: Toolbar content" %} -->
 
-The toolbar provides a human readable version of the harvest date and a quick overview of how much material us available on the given page. The time of collection can either be extracted directly from the URL or read in the toolbar. Remember that this timestamp changes when you click a link, because each source was collected individually. This resembles traditional library frameworks, just as the searching capabilities above did (TODO: Reference Hockx-Yu, 2014 and Hegarty 2022, p. 447). 
+The toolbar provides a human readable version of the harvest date and a quick overview of how much material us available on the given page. The time of collection can either be extracted directly from the URL or read in the toolbar. Remember that this timestamp changes when you click a link, because each source was collected individually. This resembles traditional library frameworks, just as the searching capabilities above did.[^8]
 
-When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources. (TODO: Reference Putnam 2016 and Strandgaard Jensen 2021) SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated. (TODO: Reference Johnston 2026) The Navigation History button is available below the search box on the front page of the application.  
+When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources.[^9] SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated.[^10] The Navigation History button is available below the search box on the front page of the application.  
 
 TODO: Add image of where to find navigation history download button
 
 ### Tools for Visualisation
 
-Collections of archived web material are often extremely big. Access to web archive collections should include tools that help researchers navigate large volumes of material. (TODO: Reference hockx-yu 2014, Winthers et al fra DD paper, Ruest et al.) SolrWayback provides built-in tools for distant reading of archived web material. These tools can be found in the toolbox highlighted below.
+Collections of archived web material are often extremely big. Access to web archive collections should include tools that help researchers navigate large volumes of material.[^11] SolrWayback provides built-in tools for distant reading of archived web material. These tools can be found in the toolbox highlighted below.
 
 TODO: Insert image of toolbox button
 
@@ -220,11 +220,11 @@ All input boxes contain an example text of kb.dk. In all steps below, this needs
 
 TODO: Insert image of nasa.gov wordcloud
 
-The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web. (TODO: Reference Brügger 2013: Historical Network Analysis of the Web) Please press the `Link Graph`-tool in the top of the article and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
+The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web.[^12] Please press the `Link Graph`-tool in the top of the article and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
 
 TODO: Insert image of linkgraph
 
-What you see here are the domains, that are linked to from webpages on nasa.gov. It is also possible to produce a graph of ingoing links, which is often a more complex task, but because SolrWayback already has this information available through its index the graph can be constructed easily. To produce such a graph you toggle the radio button to ingoing and press generate again. However, for nasa.gov in your collection, this produces a meaningless graph with no edges. If you change the domain from nasa.gov to wikipedia.org you can get a feel of how a graph of ingoing links look. This link graph tool provides an accessible entrypoint to getting started with link analysis of archived web material. For more complex link analysis the tool Link graph Gephi export can be used to export needed data for complex analysis with the network analysis tool Gephi. For an introduction to network analysis in general see Ladd et al. 2017. (TODO: Reference Ladd et all 2017: Programming Historian)
+What you see here are the domains, that are linked to from webpages on nasa.gov. It is also possible to produce a graph of ingoing links, which is often a more complex task, but because SolrWayback already has this information available through its index the graph can be constructed easily. To produce such a graph you toggle the radio button to ingoing and press generate again. However, for nasa.gov in your collection, this produces a meaningless graph with no edges. If you change the domain from nasa.gov to wikipedia.org you can get a feel of how a graph of ingoing links look. This link graph tool provides an accessible entrypoint to getting started with link analysis of archived web material. For more complex link analysis the tool Link graph Gephi export can be used to export needed data for complex analysis with the network analysis tool Gephi. For an introduction to network analysis in general see the Programming Historian lesson by Ladd et al. 2017.[^13]
 
 Next in line is the domain stats tool. This tool can be used to visualise statistics about a single domain at different levels of granularity. To get an understanding of how this tool works enter nasa.gov in the input box. The X-axis defaults to the years 1998 to 2027. This can be changed in the two timeframe boxes. The scale of the X-axis can also be customised down to daily intervals. When you press the generate button a combined line chart appears. This combined chart visualises four distinct counts: Amount of pages, ingoing links, average page size in characters, and size in kilobytes. In this combined view it is possible to remove individual line charts by clicking their respective colors at the top of the visualisation. It is also possible to render all four charts individually by pressing the `Show Individual Charts`-button. The domain statistics can be used to investigate temporal changes in the archived material. Your subset from the total collection are all collected on the same day in 2009 and therefore there is not enough datapoints to create a telling visualisation. An example of how the graph could look with more data is shown here.
 
@@ -236,7 +236,7 @@ TODO: Insert Ngram figure
 
 This type of visualisation can be used to investigate trends in usage of different words. One important aspect of all of these tools to keep in mind is what they can be used to investigate. Collections from web archives are very strictly bound to the collecting practices of holding institutions such as the Internet Archive or the Royal Danish Library. This means that spikes in these visualisations needs to be treated with care as they can just as easily be a product of excessive collecting of material as markers of change.
 
-The functionality of the toolbox can support you in initial distant readings of material in your collection. For further distant reading or quantitative approaches researchers often export data from SolrWayback.(TODO: Reference Kurzmeier 2025) Data can be exported in many formats from the front page of the application.
+The functionality of the toolbox can support you in initial distant readings of material in your collection. For further distant reading or quantitative approaches researchers often export data from SolrWayback.[^14] Data can be exported in many formats from the front page of the application.
 
 ## Conclusion: A New World of Source Material Emerges
 
@@ -248,11 +248,35 @@ SolrWayback includes a toolbox of tools for initial distant reading of archived 
 
 
 ## Literature
-Kurzmeier, Michael. “Contextualizing and Unlocking Political Web Defacements for Research.” _Journal of Digital History_, no. preprint (2025).
+Bell, Mark, Tom Storrar, and Jane Winters. ‘Chapter 2: Web Archives and the Problem of Access: Prototyping a Researcher Dashboard for the UK Government Web Archive’. In Archives, Access and Artificial Intelligence: Working with Born-Digital and Digitized Archival Collections, edited by Lise Jaillant. Bielefeld University Press, 2022. https://www.degruyterbrill.com/document/doi/10.1515/9783839455845-003/html.
 
-Maemura, Emily. “All WARC and No Playback: The Materialities of Data-Centered Web Archives Research.” _Big Data & Society_ 10, no. 1 (2023): 20539517231163172. [https://doi.org/10.1177/20539517231163172](https://doi.org/10.1177/20539517231163172).
+Berlin, John, Mat Kelly, Michael L. Nelson, and Michele C. Weigle. ‘To Re-Experience the Web: A Framework for the Transformation and Replay of Archived Web Pages’. ACM Trans. Web 17, no. 4 (2023): 28:1-28:49. https://doi.org/10.1145/3589206.
 
-Ruest, Nick, Samantha Fritz, and Ian Milligan. “Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks.” _Archives and Records_ 43, no. 3 (2022): 316–31. [https://doi.org/10.1080/23257962.2022.2100336](https://doi.org/10.1080/23257962.2022.2100336).
+Brügger, Niels. ‘Historical Network Analysis of the Web’. Social Science Computer Review (Los Angeles, CA) 31, no. 3 (2013): 306–21. https://doi.org/10.1177/0894439312454267.
+
+Brügger, Niels. The Archived Web: Doing History in the Digital Age. The MIT Press, 2018.
+
+Gomes, Daniel, André L. Santos, and Mário J. Silva. ‘Managing Duplicates in a Web Archive’. Proceedings of the 2006 ACM Symposium on Applied Computing, 23 April 2006, 818–25. https://doi.org/10.1145/1141277.1141465.
+
+Hegarty, Kieran. ‘The Invention of the Archived Web: Tracing the Influence of Library Frameworks on Web Archiving Infrastructure’. Internet Histories 6, no. 4 (2022): 432–51. https://doi.org/10.1080/24701475.2022.2103988.
+
+Hockx-Yu, Helen. ‘Access and Scholarly Use of Web Archives’. Alexandria: The Journal of National and International Library and Information Issues, ahead of print, 2014. https://doi.org/10.7227/ALX.0023.
+
+Jensen, Helle Strandgaard. ‘Digital Archival Literacy for (All) Historians’. In Media History, vol. 27. no. 2. 2021. https://doi.org/10.1080/13688804.2020.1779047.
+
+Johnston, Victor Harbo. ‘Introducing Reproducible Navigation of a Web Archive: SolrWayback Navigation Tracker’. Computational Humanities Research, 13 April 2026, 1–8. https://doi.org/10.1017/chr.2026.10030.
+
+Kurzmeier, Michael. ‘Contextualizing and Unlocking Political Web Defacements for Research’. Journal of Digital History, no. preprint (2025).
+
+Ladd, John R., Jessica Otis, Christopher N. Warren, and Scott Weingart. ‘Exploring and Analyzing Network Data with Python’. Programming Historian, 23 August 2017. https://programminghistorian.org/en/lessons/exploring-and-analyzing-network-data-with-python.
+
+Maemura, Emily. ‘All WARC and No Playback: The Materialities of Data-Centered Web Archives Research’. Big Data & Society 10, no. 1 (2023): 20539517231163172. https://doi.org/10.1177/20539517231163172.
+
+Putnam, Lara. ‘The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast’. The American Historical Review (Oxford) 121, no. 2 (2016): 377–402. https://doi.org/10.1093/ahr/121.2.377.
+
+Ruest, Nick, Samantha Fritz, and Ian Milligan. ‘Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks’. Archives and Records 43, no. 3 (2022): 316–31. https://doi.org/10.1080/23257962.2022.2100336.
+
+
 
 ### Inserting Images:
 
@@ -265,7 +289,37 @@ Copy this short-code to insert an image. Replace words in all caps with your ima
 
 
 ##### Endnotes
-[^1]: Maemura, Emily. “All WARC and No Playback: The Materialities of Data-Centered Web Archives Research.” _Big Data & Society_ 10, no. 1 (2023): 20539517231163172. [https://doi.org/10.1177/20539517231163172](https://doi.org/10.1177/20539517231163172). Ruest, Nick, Samantha Fritz, and Ian Milligan. “Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks.” _Archives and Records_ 43, no. 3 (2022): 316–31. [https://doi.org/10.1080/23257962.2022.2100336](https://doi.org/10.1080/23257962.2022.2100336).
+[^1]: Emily Maemura, ‘All WARC and No Playback: The Materialities of Data-Centered Web Archives Research’, Big Data & Society 10, no. 1 (2023): 20539517231163172, https://doi.org/10.1177/20539517231163172; Nick Ruest et al., ‘Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks’, Archives and Records 43, no. 3 (2022): 316–31, https://doi.org/10.1080/23257962.2022.2100336.
 
-[^2]: Kurzmeier, Michael. “Contextualizing and Unlocking Political Web Defacements for Research.” _Journal of Digital History_, no. preprint (2025).
+[^2]: Michael Kurzmeier, ‘Contextualizing and Unlocking Political Web Defacements for Research’, Journal of Digital History, no. preprint (2025).
+
+[^3]: Niels Brügger, The Archived Web: Doing History in the Digital Age (The MIT Press, 2018).
+
+[^4]: Daniel Gomes et al., ‘Managing Duplicates in a Web Archive’, Proceedings of the 2006 ACM Symposium on Applied Computing, 23 April 2006, 818–25, https://doi.org/10.1145/1141277.1141465.
+
+[^5]: Brügger, The Archived Web: Doing History in the Digital Age, p. 22-23; Emily Maemura, ‘All WARC and No Playback: The Materialities of Data-Centered Web Archives Research’, p. 8.
+
+[^6]: John Berlin et al., ‘To Re-Experience the Web: A Framework for the Transformation and Replay of Archived Web Pages’, ACM Trans. Web 17, no. 4 (2023): 28:1-28:49, https://doi.org/10.1145/3589206.
+
+[^7]: Niels Brügger, The Archived Web: Doing History in the Digital Age, p. 28-30.
+
+[^8]: Kieran Hegarty, ‘The Invention of the Archived Web: Tracing the Influence of Library Frameworks on Web Archiving Infrastructure’, p. 447, Internet Histories 6, no. 4 (2022): 432–51, https://doi.org/10.1080/24701475.2022.2103988; Helen Hockx-Yu, ‘Access and Scholarly Use of Web Archives’, Alexandria: The Journal of National and International Library and Information Issues, ahead of print, 2014, https://doi.org/10.7227/ALX.0023.
+
+[^9]: Lara Putnam, ‘The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast’, The American Historical Review (Oxford) 121, no. 2 (2016): 377–402, https://doi.org/10.1093/ahr/121.2.377; Helle Strandgaard Jensen, ‘Digital Archival Literacy for (All) Historians’, in Media History, vol. 27, no. 2, 2021, https://doi.org/10.1080/13688804.2020.1779047.
+
+[^10]: Victor Harbo Johnston, ‘Introducing Reproducible Navigation of a Web Archive: SolrWayback Navigation Tracker’, Computational Humanities Research, 13 April 2026, 1–8, https://doi.org/10.1017/chr.2026.10030.
+
+[^11]: Ruest et al., ‘Creating Order from the Mess’; Hockx-Yu, ‘Access and Scholarly Use of Web Archives’; Mark Bell et al., ‘Chapter 2: Web Archives and the Problem of Access: Prototyping a Researcher Dashboard for the UK Government Web Archive’, in Archives, Access and Artificial Intelligence: Working with Born-Digital and Digitized Archival Collections, ed. Lise Jaillant (Bielefeld University Press, 2022), https://www.degruyterbrill.com/document/doi/10.1515/9783839455845-003/html.
+
+[^12]: Niels Brügger, ‘Historical Network Analysis of the Web’, Social Science Computer Review (Los Angeles, CA) 31, no. 3 (2013): 306–21, https://doi.org/10.1177/0894439312454267.
+
+[^13]: John R. Ladd et al., ‘Exploring and Analyzing Network Data with Python’, Programming Historian, 23 August 2017, https://programminghistorian.org/en/lessons/exploring-and-analyzing-network-data-with-python.
+
+[^14]: Kurzmeier, ‘Contextualizing and Unlocking Political Web Defacements for Research’.
+
+
+
+
+
+
 
