@@ -138,13 +138,13 @@ If for instance you are interested in analysing politicians views on immigration
 
 This webpage was harvested on 14 May 2009. When you first view the Bilirakis website from 2009, it appears visually incomplete. To understand why, consider how the web and by extension the archived web is structured. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different. (TODO: reference to Brügger 2018, chapter 2) This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the resources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand through this lesson. The replay would almost certainly be more complete with a larger portion of the EOTWA collection.  
 
-![Figure 4: Playback of Bilirakis website from 2009](./img/4_playback_from_2009.png)
-<!-- {% include figure.html filename="./img/4_playback_from_2009.png" caption="Figure 4: Playback of Bilirakis website from 2009" %} -->
+![Figure 3: Playback of Bilirakis website from 2009](./img/3_playback_from_2009.png)
+<!-- {% include figure.html filename="./img/3_playback_from_2009.png" caption="Figure 3: Playback of Bilirakis website from 2009" %} -->
 
 To get an overview of how an individual site has been archived, SolrWayback provides a small but useful toolbar, when an archived site is shown. By pressing the toolbar in the top left corner and then pressing the button `View page resources`, you can get information on how the individual resources from the currently shown page have been archived. This explains why the replayed site shows mostly links and text. The resource overview below clearly shows that sixteen different resources that were part of the webpage when it was live is not included in your archived version. If you had been working with the complete version of the EOTWA collection the replay would be better as the missing resources are most likely located in some of the many other WARC files available at the End of Term Web Archive.
 
-![Figure 5: Missing resources from Bilirakis website](./img/5_missing_resources.png)
-<!-- {% include figure.html filename="./img/5_missing_resources.png" caption="Figure 5: Missing resources from Bilirakis website" %} -->
+![Figure 4: Missing resources from Bilirakis website](./img/4_missing_resources.png)
+<!-- {% include figure.html filename="./img/4_missing_resources.png" caption="Figure 4: Missing resources from Bilirakis website" %} -->
 
 The search field in SolrWayback supports a multitude of complex search functionalities. They can however be hard to navigate when using the software for the first time. The search box supports the standard query types found in any information retrieval system or library database. This includes traditional use of [Boolean operators](https://en.wikipedia.org/wiki/Boolean_algebra) such as AND, OR, and NOT. They must be entered in uppercase or else the search technology understands them as search terms instead of Boolean operators. To continue the example above, you might be interested in searching for the terms `immigration OR immigrant` to broaden the results from before. This provides you with 180 results compared to the `immigration` query, which only provided 80 results in your subset of the archive. To narrow results instead, use the Boolean operator AND. For example: `immigration AND mexican`, which only returns one result in your very limited corpus. These operators can also be used in combination, but then you would need to use parentheses to group search terms that are related to the individual Boolean operators. Staying with the example of immigration a combined query could look like this: `immigration OR (mexican AND immigrant)`.
 
@@ -154,8 +154,8 @@ The searching strategies above are often available in all sorts of information r
 
 The section above uses the field `content_length` as the primary example of how to query with a field. SolrWayback contains multiple such fields. The quickest way to view them is to run a wildcard query (`*:*`) and then press the `View data fields` button shown below:
 
-![Figure 6: Where to find data fields](./img/6_data_fields.png)
-<!-- {% include figure.html filename="./img6_data_fields.png" caption="Figure 6: Where to find data fields" %} -->
+![Figure 5: Where to find data fields](./img/5_data_fields.png)
+<!-- {% include figure.html filename="./img/5_data_fields.png" caption="Figure 5: Where to find data fields" %} -->
 
 When you press this button, a list of available fields appears. Here you see fields such as `content`, `content_type`, `crawl_date`, `elements_used`, `links` and many more. Most of these fields can be used in queries just as the `content_length` above. These fields can be used in multiple ways to construct very niche searches. For now it is enough to know where to find them for future reference.
 
@@ -174,8 +174,8 @@ Until now, the lesson has been focused on how to search through the search bar. 
 
 If you do a new `*:*`-query and then have a look at the resulting page. Here you get some useful information on the left of the screen. These are facets that give you an overview of content in your collection and they can be used to tailor your search. When a facet is clicked, it will be applied to your query and only documents with that value in the faceted field will be included in the result. 
 
-![Figure 3: SolrWayback facets](./img/3_solrwayback_facets.png) TODO: Give this the right caption and file name
-<!-- {% include figure.html filename="./img/3_solrwayback_facets.png" caption="Figure 3: SolrWayback facets" %} TODO: Give this the right caption and file name -->
+![Figure 6: SolrWayback facets](./img/6_solrwayback_facets.png)
+<!-- {% include figure.html filename="./img/6_solrwayback_facets.png" caption="Figure 6: SolrWayback facets" %} -->
 
 Facets can also be used to give an immediate overview of how the material in the collection is scattered on different domains, content types or crawl years etc. One important thing to mention in relation to facets is the relationship between entries in the search bar and the application of facets. Apply facets last as changing the search box input resets the query and removes all applied facets. You have now learned how to search through the search box and make use of the facets for filtering a search result.
 
