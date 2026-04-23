@@ -87,24 +87,36 @@ When you've downloaded the correct version please unzip the file, where you want
 ## Start Up
 With the SolrWayback bundle downloaded and having moved your properties to your home directory you are ready to start the software. This is done through a terminal by issuing two commands. Please follow the section below according to your OS. The two commands start the two parts of the application. The first command starts the webserver that is included in the application and the second command starts the search engine in the application.
 
-Firstly, you need to navigate to the SolrWayback bundle that you downloaded in the previous step in your command line interface. On mac, this can be done by finding the `solrwayback_package_5.4.2` through finder and then right clicking the directory. One of the last options in the pop up menu is *New Terminal at Folder*. Press this to easily open a terminal session in the correct location. On Windows 11, the same behaviour can be achieved by opening the `solrwayback_package_5.4.2` directory in File Explorer and then right clicking somewhere in the directory. Here you should see a *Open in Terminal* option. The terminal is a useful tool and further introduction to its capabilities can be learned from Ian Milligan and James Baker lesson: Introduction to the Bash Command Line.[^15] 
+Firstly, you need to navigate to the SolrWayback bundle that you downloaded in the previous step in your command line interface. On mac, this can be done by finding the `solrwayback_package_5.4.2` through finder and then right clicking the directory. One of the last options in the pop up menu is *New Terminal at Folder*. Press this to easily open a terminal session in the correct location. On Windows 11, the same behaviour can be achieved by opening the `solrwayback_package_5.4.2` directory in File Explorer and then right clicking somewhere in the directory. Here you should see a *Open in Terminal* option. The terminal is a useful tool and further introduction to its capabilities can be learned from Ian Milligan and James Baker lesson: Introduction to the Bash Command Line.[^15] With a command line interface opened and located in the correct location you are now ready to start the application. The commands vary a little depending on your operating system. Please follow the part applicable for your system below. 
 
 <div style="display: flex; gap: 20px;">
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
     <h3>Linux/Mac</h3>
-    <p>This is some text in the first column.</p>
+    <p>
+      To start the two parts of the application on Linux or Mac you need to run the following two commands:
+    </p>
+    <p>
+      To start the interface type the following into your terminal: <code>./tomcat-9/bin/startup.sh<code>
+    </p>
+    <p>
+      To start the search engine in the application type this command into your terminal: <code>./solr-9/bin/solr start -c</code>
+    </p>
   </div>
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
     <h3>Windows</h3>
-    <p>This is some text in the second column.</p>
-    <ul>
-      <li>Item C</li>
-      <li>Item D</li>
-    </ul>
+    <p>
+      To start the two parts of the application on Windows you need to navigate into two different directories inside the current directory and run the following commands:
+    </p>
+    <p>
+      To start the interface navigate to <code>tomcat-9\bin\</code> by typing <code>cd .\tomcat-9\bin</code> from here you can start the first part of the application by typing <code>startup.bat</code> and pressing enter. This might open another command line interface. It is important that you let this window stay open.
+    </p>
+    <p>
+      To start the search engine in the application you need to navigate back to the outer level of the bundle directory. When you are inside the <code>tomcat-9\bin</code> directory, this can be achieved by typing <code>cd ../..</code>. This command moves you up two levels and you can now move into the <code>solr-9\bin\</code> directory. This is done by typing <code>cd solr-9\bin\</code>. From here you can type <code>solr.cmd start -c</code> to start the search engine of the application.
+    </p>
   </div>
 </div>
 
-Now you have SolrWayback running. To verify that it runs you can access the application in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this: 
+Now you have SolrWayback running. To verify that it runs you can access the application in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this. When accessing the application by URL it is important to remember to type in the full address: 
 
 ![Figure 1: SolrWayback front page](./img/1_solrwayback_frontpage.png)
 <!-- {% include figure.html filename="./img/1_solrwayback_frontpage.png" caption="Figure 1: SolrWayback front page" %} -->
@@ -112,7 +124,7 @@ Now you have SolrWayback running. To verify that it runs you can access the appl
 You have now started the application successfully and are ready to make the WARC files from the EOTWA searchable in the system.
 
 ## Indexing
-SolrWayback uses a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, which you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package_5.4.2`. Once indexed, WARC files cannot be moved. Doing so breaks playback until you rebuild the index. Run the following commands in your Command Line Interface (CLI) — for example, Terminal or PowerShell.
+SolrWayback uses a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, that you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package_5.4.2`. Once indexed, WARC files cannot be moved. Doing so breaks playback until you rebuild the index. Run the following commands in your Command Line Interface (CLI) — for example, Terminal or PowerShell.
 
 <div style="display: flex; gap: 20px;">
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
