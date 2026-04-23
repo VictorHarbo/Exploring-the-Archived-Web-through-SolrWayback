@@ -82,10 +82,12 @@ For now, save these files in their own directory or leave them in your Downloads
 ## Download
 To get started with SolrWayback, the first thing you need to do is to download the software from the SolrWayback Github page. The software can be installed in multiple ways, however in this lesson you will install it through the bundle release version, which is the most common way. To get started navigate to the [release page](https://github.com/netarchivesuite/solrwayback/releases) of SolrWayback and download version 5.4.2 (This was the newest version when this lesson was written. This lesson will most likely work for newer versions as well).
 
-When you've downloaded the correct version please unzip the file, where you want it on your computer. The unzipped directory will have the name: `solrwayback_package_5.4.2`. Inside the directory a folder named properties exists. Please copy the two files from inside this folder to your home directory. On a Linux/Mac this directory is called `/Users/yourUsername` and on windows it is located at `C:\Users\yourUsername\`. You are now ready to start SolrWayback and index your first WARC files. The next sections of this lesson are operation system dependent, so they will contain separate sections for Linux/Mac and Windows respectively.
+When you've downloaded the correct version please unzip the file, where you want it on your computer. The unzipped directory will have the name: `solrwayback_package_5.4.2`. Inside the directory a folder named properties exists. Please copy the two files from inside this folder to your home directory. On a Linux or Mac computer this directory is called `/Users/yourUsername` and on Windows it is located at `C:\Users\yourUsername\`. You are now ready to start SolrWayback and index your first WARC files. The next sections of this lesson are operation system dependent, so they will contain separate sections for Linux/Mac and Windows respectively.
 
 ## Start Up
 With the SolrWayback bundle downloaded and having moved your properties to your home directory you are ready to start the software. This is done through a terminal by issuing two commands. Please follow the section below according to your OS. The two commands start the two parts of the application. The first command starts the webserver that is included in the application and the second command starts the search engine in the application.
+
+Firstly, you need to navigate to the SolrWayback bundle that you downloaded in the previous step in your command line interface. On mac, this can be done by finding the `solrwayback_package_5.4.2` through finder and then right clicking the directory. One of the last options in the pop up menu is *New Terminal at Folder*. Press this to easily open a terminal session in the correct location. On Windows 11, the same behaviour can be achieved by opening the `solrwayback_package_5.4.2` directory in File Explorer and then right clicking somewhere in the directory. Here you should see a *Open in Terminal* option. The terminal is a useful tool and further introduction to its capabilities can be learned from Ian Milligan and James Baker lesson: Introduction to the Bash Command Line.[^15] 
 
 <div style="display: flex; gap: 20px;">
   <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
@@ -272,6 +274,9 @@ Ladd, John R., Jessica Otis, Christopher N. Warren, and Scott Weingart. ‘Explo
 
 Maemura, Emily. ‘All WARC and No Playback: The Materialities of Data-Centered Web Archives Research’. Big Data & Society 10, no. 1 (2023): 20539517231163172. https://doi.org/10.1177/20539517231163172.
 
+Milligan, Ian, and James Baker. ‘Introduction to the Bash Command Line’. Programming Historian, 20 September 2014. https://programminghistorian.org/en/lessons/intro-to-bash.
+
+
 Putnam, Lara. ‘The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast’. The American Historical Review (Oxford) 121, no. 2 (2016): 377–402. https://doi.org/10.1093/ahr/121.2.377.
 
 Ruest, Nick, Samantha Fritz, and Ian Milligan. ‘Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks’. Archives and Records 43, no. 3 (2022): 316–31. https://doi.org/10.1080/23257962.2022.2100336.
@@ -316,6 +321,8 @@ Copy this short-code to insert an image. Replace words in all caps with your ima
 [^13]: John R. Ladd et al., ‘Exploring and Analyzing Network Data with Python’, Programming Historian, 23 August 2017, https://programminghistorian.org/en/lessons/exploring-and-analyzing-network-data-with-python.
 
 [^14]: Kurzmeier, ‘Contextualizing and Unlocking Political Web Defacements for Research’.
+
+[^15]: Ian Milligan and James Baker, ‘Introduction to the Bash Command Line’, Programming Historian, 20 September 2014, https://programminghistorian.org/en/lessons/intro-to-bash.
 
 
 
