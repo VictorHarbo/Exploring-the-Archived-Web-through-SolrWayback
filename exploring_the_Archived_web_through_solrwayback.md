@@ -211,17 +211,20 @@ The toolbar provides a human readable version of the harvest date and a quick ov
 
 When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources.[^9] SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated.[^10] The Navigation History button is available below the search box on the front page of the application.  
 
-TODO: Add image of where to find navigation history download button
+![Figure 9: Button for downloading navigation history](./img/9_navigation_history.png)
+<!-- {% include figure.html filename="./img/9_navigation_history.png" caption="Figure 9: Button for downloading navigation history" %} -->
 
 ### Tools for Visualisation
 
 Collections of archived web material are often extremely big. Access to web archive collections should include tools that help researchers navigate large volumes of material.[^11] SolrWayback provides built-in tools for distant reading of archived web material. These tools can be found in the toolbox highlighted below.
 
-TODO: Insert image of toolbox button
+![Figure 10: Button for opening the toolbox](./img/10_toolbox_button.png)
+<!-- {% include figure.html filename="./img/10_toolbox_button.png" caption="Figure 10: Button for opening the toolbox" %} -->
 
 The following section provides a brief overview of how these tools can be used to explore your collection. To make sure you can follow along, please make a query for everything: `*:*`. Now press the toolbar icon and you will be given the following screen:
 
-TODO: Insert image of toolbox
+![Figure 11: View of the SolrWayback toolbox](./img/11_toolbox_content.png)
+<!-- {% include figure.html filename="./img/11_toolbox_content.png" caption="Figure 11: View of the SolrWayback toolbox" %} -->
 
 The toolbox currently contains five different tools:
 - Wordcloud
@@ -232,11 +235,13 @@ The toolbox currently contains five different tools:
 
 All input boxes contain an example text of kb.dk. In all steps below, this needs to be changed to a domain that is available in your small corpus. Most the time the lesson will use nasa.gov as the example here. The wordcloud tool provides the possibility of creating domain wide wordclouds. These can be used to gain an overview of what is the most used words across a specific domain. To see an example of how this looks enter `nasa.gov` in the field to the left and press `Create wordcloud`. This compiles a wordcloud of the most used terms across the nasa.gov domain in you collection.
 
-TODO: Insert image of nasa.gov wordcloud
+![Figure 12: Example wordcloud of nasa.gov](./img/12_wordcloud_example.png)
+<!-- {% include figure.html filename="./img/12_wordcloud_example.png" caption="Figure 12: Example wordcloud of nasa.gov" %} -->
 
 The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web.[^12] Please press the `Link Graph`-tool in the top of the article and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
 
-TODO: Insert image of linkgraph
+![Figure 13: Example linkgraph of nasa.gov](./img/13_linkgraph_example.png)
+<!-- {% include figure.html filename="./img/13_linkgraph_example.png" caption="Figure 13: Example linkgraph of nasa.gov" %} -->
 
 What you see here are the domains, that are linked to from webpages on nasa.gov. It is also possible to produce a graph of ingoing links, which is often a more complex task, but because SolrWayback already has this information available through its index the graph can be constructed easily. To produce such a graph you toggle the radio button to ingoing and press generate again. However, for nasa.gov in your collection, this produces a meaningless graph with no edges. If you change the domain from nasa.gov to wikipedia.org you can get a feel of how a graph of ingoing links look. This link graph tool provides an accessible entrypoint to getting started with link analysis of archived web material. For more complex link analysis the tool Link graph Gephi export can be used to export needed data for complex analysis with the network analysis tool Gephi. For an introduction to network analysis in general see the Programming Historian lesson by Ladd et al. 2017.[^13]
 
@@ -246,7 +251,8 @@ TODO: Insert domain stats for nasa.gov from webchild corpus.
 
 The last tool in the toolbox is the Ngram Netarchive tool. This tool can be used to discover and investigate how frequently a term appears in the collection over time. Multiple terms can be shown on the same graph at once by searching for them individually. For instance, staying in the space program example, you can add terms such as `nasa`, `space`, and `astronaut` to the visualisation and if you then had material from multiple years, the visualisation would represent how often the words were present in the collection. 
 
-TODO: Insert Ngram figure
+![Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection](./img/15_ngram_example.png)
+<!-- {% include figure.html filename="./img/15_ngram_example.png" caption="Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection" %} -->
 
 This type of visualisation can be used to investigate trends in usage of different words. One important aspect of all of these tools to keep in mind is what they can be used to investigate. Collections from web archives are very strictly bound to the collecting practices of holding institutions such as the Internet Archive or the Royal Danish Library. This means that spikes in these visualisations needs to be treated with care as they can just as easily be a product of excessive collecting of material as markers of change.
 
@@ -292,17 +298,6 @@ Milligan, Ian, and James Baker. ‘Introduction to the Bash Command Line’. Pro
 Putnam, Lara. ‘The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast’. The American Historical Review (Oxford) 121, no. 2 (2016): 377–402. https://doi.org/10.1093/ahr/121.2.377.
 
 Ruest, Nick, Samantha Fritz, and Ian Milligan. ‘Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks’. Archives and Records 43, no. 3 (2022): 316–31. https://doi.org/10.1080/23257962.2022.2100336.
-
-
-
-### Inserting Images:
-
-Copy this short-code to insert an image. Replace words in all caps with your image information (eg, Figure1.jpg). Captions should include sequential image numbering (eg "Figure 1: ..."). 
-
-{% include figure.html filename="IMAGE-FILENAME" caption="CAPTION TO IMAGE" %}
-
-
-
 
 
 ##### Endnotes
