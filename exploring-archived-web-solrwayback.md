@@ -29,6 +29,12 @@ authors:
 
 {% include toc.html %}
 
+<div class="alert alert-warning">
+  This lesson requires at least 4GB of RAM and approximately 2GB of free disk space. 
+  The lesson also requires a valid Java installation of at least version 11. JAVA_HOME must be set correctly as well.
+  Administrative access may be required to run the startup commands.
+</div>
+
 --
 # Lesson Aims
 When readers have finished this lesson, they will be able to:
@@ -89,32 +95,21 @@ With the SolrWayback bundle downloaded and having moved your properties to your 
 
 Firstly, you need to navigate to the SolrWayback bundle that you downloaded in the previous step in your command line interface. On mac, this can be done by finding the `solrwayback_package_5.4.2` through finder and then right clicking the directory. One of the last options in the pop up menu is *New Terminal at Folder*. Press this to easily open a terminal session in the correct location. On Windows 11, the same behaviour can be achieved by opening the `solrwayback_package_5.4.2` directory in File Explorer and then right clicking somewhere in the directory. Here you should see a *Open in Terminal* option. The terminal is a useful tool and further introduction to its capabilities can be learned from Ian Milligan and James Baker lesson: Introduction to the Bash Command Line.[^15] With a command line interface opened and located in the correct location you are now ready to start the application. The commands vary a little depending on your operating system. Please follow the part applicable for your system below. 
 
-<div style="display: flex; gap: 20px;">
-  <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
-    <h3>Linux/Mac</h3>
-    <p>
-      To start the two parts of the application on Linux or Mac you need to run the following two commands:
-    </p>
-    <p>
-      To start the interface type the following into your terminal: <code>./tomcat-9/bin/startup.sh<code>
-    </p>
-    <p>
-      To start the search engine in the application type this command into your terminal: <code>./solr-9/bin/solr start -c</code>
-    </p>
-  </div>
-  <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
-    <h3>Windows</h3>
-    <p>
-      To start the two parts of the application on Windows you need to navigate into two different directories inside the current directory and run the following commands:
-    </p>
-    <p>
-      To start the interface navigate to <code>tomcat-9\bin\</code> by typing <code>cd .\tomcat-9\bin</code> from here you can start the first part of the application by typing <code>startup.bat</code> and pressing enter. This might open another command line interface. It is important that you let this window stay open.
-    </p>
-    <p>
-      To start the search engine in the application you need to navigate back to the outer level of the bundle directory. When you are inside the <code>tomcat-9\bin</code> directory, this can be achieved by typing <code>cd ../..</code>. This command moves you up two levels and you can now move into the <code>solr-9\bin\</code> directory. This is done by typing <code>cd solr-9\bin\</code>. From here you can type <code>solr.cmd start -c</code> to start the search engine of the application.
-    </p>
-  </div>
-</div>
+#### Linux/Mac
+
+To start the two parts of the application on Linux or Mac you need to run the following two commands:
+
+To start the interface type the following into your terminal: `./tomcat-9/bin/startup.sh`
+
+To start the search engine in the application type this command into your terminal: `./solr-9/bin/solr start -c`
+
+#### Windows
+
+To start the two parts of the application on Windows you need to navigate into two different directories inside the current directory and run the following commands:
+
+To start the interface navigate to `tomcat-9\bin\` by typing `cd .\tomcat-9\bin`. From here you can start the first part of the application by typing `startup.bat` and pressing enter. This might open another command line interface. It is important that you let this window stay open.
+
+To start the search engine in the application you need to navigate back to the outer level of the bundle directory. When you are inside the `tomcat-9\bin` directory, this can be achieved by typing `cd ../..`. This command moves you up two levels and you can now move into the `solr-9\bin\` directory. This is done by typing `cd solr-9\bin\`. From here you can type `solr.cmd start -c` to start the search engine of the application.
 
 Now you have SolrWayback running. To verify that it runs you can access the application in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this. When accessing the application by URL it is important to remember to type in the full address: 
 
@@ -126,16 +121,16 @@ You have now started the application successfully and are ready to make the WARC
 ## Indexing
 SolrWayback uses a search engine named Solr. To make your WARC files available for querying in SolrWayback you need to index the files. This process is OS dependent just as the start up above was. The first thing you need to do is to move the WARC files, that you downloaded earlier into their permanent place. For this lesson please move them into the directory `indexing/warcs1` inside the `solrwayback_package_5.4.2`. Once indexed, WARC files cannot be moved. Doing so breaks playback until you rebuild the index. Run the following commands in your Command Line Interface (CLI) — for example, Terminal or PowerShell.
 
-<div style="display: flex; gap: 20px;">
-  <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
-    <h3>Linux/Mac</h3>
-    <p>To index your WARC files from the directory <code>solrwayback_package_5.4.2/indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following command in your terminal: <code>THREADS=2 ./warc-indexer.sh warcs1/*</code>.</p> 
-  </div>
-  <div style="flex: 1; padding: 10px; #ccc; border-radius: 8px;">
-    <h3>Windows</h3>
-    <p>To index your WARC files from the directory <code>solrwayback_package_5.4.2/indexing/warcs1</code> please move into the directory <code>indexing</code> and run the following bat-file in your terminal: <code>batch_warcs1_folder.bat</code></p>
-    <p>NOTE: On Windows it is very important that you follow the directions above explicitly and moves into the directory before you run the <code>.bat</code>-file.</p>
-  </div>
+#### Linux/Mac
+
+To index your WARC files from the directory `solrwayback_package_5.4.2/indexing/warcs1` please move into the directory `indexing` and run the following command in your terminal: `THREADS=2 ./warc-indexer.sh warcs1/*`.
+
+#### Windows
+
+To index your WARC files from the directory `solrwayback_package_5.4.2/indexing/warcs1` please move into the directory `indexing` and run the following bat-file in your terminal: `batch_warcs1_folder.bat`
+
+<div class="alert alert-warning">
+  On Windows it is very important that you follow the directions above explicitly and move into the directory before you run the <code>.bat</code>-file.
 </div>
 
 ![Figure 2: Indexing on mac](./img/2_mac_indexing.png)
@@ -238,7 +233,7 @@ All input boxes contain an example text of kb.dk. In all steps below, this needs
 ![Figure 12: Example wordcloud of nasa.gov](./img/12_wordcloud_example.png)
 <!-- {% include figure.html filename="./img/12_wordcloud_example.png" caption="Figure 12: Example wordcloud of nasa.gov" %} -->
 
-The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web.[^12] Please press the `Link Graph`-tool in the top of the article and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
+The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web.[^12] Please press the `Link Graph`-tool in the top of the lesson and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
 
 ![Figure 13: Example linkgraph of nasa.gov](./img/13_linkgraph_example.png)
 <!-- {% include figure.html filename="./img/13_linkgraph_example.png" caption="Figure 13: Example linkgraph of nasa.gov" %} -->
