@@ -113,8 +113,8 @@ To start the search engine in the application you need to navigate back to the o
 
 Now you have SolrWayback running. To verify that it runs you can access the application in your web browser by entering the URL: http://localhost:8080/solrwayback/. Here you should see the front page of the application which looks like this. When accessing the application by URL it is important to remember to type in the full address: 
 
-![Figure 1: SolrWayback front page](./img/1_solrwayback_frontpage.png)
-<!-- {% include figure.html filename="./img/1_solrwayback_frontpage.png" alt="Screenshot of the SolrWayback front page showing the search bar, toggle buttons, and empty results area" caption="Figure 1: SolrWayback front page" %} -->
+![Figure 1: SolrWayback front page](./img/exploring-archived-web-solrwayback1.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback1.png" alt="Screenshot of the SolrWayback front page showing the search bar, toggle buttons, and empty results area" caption="Figure 1: SolrWayback front page" %} -->
 
 You have now started the application successfully and are ready to make the WARC files from the EOTWA searchable in the system.
 
@@ -133,8 +133,8 @@ To index your WARC files from the directory `solrwayback_package_5.4.2/indexing/
   On Windows it is very important that you follow the directions above explicitly and move into the directory before you run the <code>.bat</code>-file.
 </div>
 
-![Figure 2: Indexing on mac](./img/2_mac_indexing.png)
-<!-- {% include figure.html filename="./img/2_mac_indexing.png" alt="Terminal window on a Mac displaying scrolling output produced during WARC file indexing" caption="Figure 2: Terminal output when indexing on a mac" %} -->
+![Figure 2: Indexing on mac](./img/exploring-archived-web-solrwayback2.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback2.png" alt="Terminal window on a Mac displaying scrolling output produced during WARC file indexing" caption="Figure 2: Terminal output when indexing on a mac" %} -->
 
 This indexes all documents in the `warcs1` folder. Your terminal will display output showing indexing progress — this is expected. When the indexing has finished your terminal will return to an interactive state, represented by a `$` and now you should be able to see the indexed documents in the SolrWayback web interface. To validate that the documents have been indexed, you can go to the application at the URL: http://localhost:8080/solrwayback/ and type `*:*` in the search box. This is a wildcard query that fetches all documents available in the application. This should return 6,031 results.
 
@@ -147,13 +147,13 @@ If for instance you are interested in analysing politicians views on immigration
 
 This webpage was harvested on 14 May 2009. When you first view the Bilirakis website from 2009, it appears visually incomplete. To understand why, consider how the web and by extension the archived web is structured. The web is born fragmented and when a website is shown to you as a user, you could in theory be looking at a website where the text is located at one server and an image is located somewhere completely different.[^3] This fragmentation of source material also means that you cannot expect sources to shown in a complete state in the test corpus that you are working with here, as parts of the resources that are used to construct the webpage simply aren't available in the few archival sources that you have in hand through this lesson. The replay would almost certainly be more complete with a larger portion of the EOTWA collection.  
 
-![Figure 3: Playback of Bilirakis website from 2009](./img/3_playback_from_2009.png)
-<!-- {% include figure.html filename="./img/3_playback_from_2009.png" alt="Archived playback of the Bilirakis congressional website from 2009 rendered with missing images and broken layout due to incomplete archiving" caption="Figure 3: Playback of Bilirakis website from 2009" %} -->
+![Figure 3: Playback of Bilirakis website from 2009](./img/exploring-archived-web-solrwayback3.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback3.png" alt="Archived playback of the Bilirakis congressional website from 2009 rendered with missing images and broken layout due to incomplete archiving" caption="Figure 3: Playback of Bilirakis website from 2009" %} -->
 
 To get an overview of how an individual site has been archived, SolrWayback provides a small but useful toolbar, when an archived site is shown. By pressing the toolbar in the top left corner and then pressing the button `View page resources`, you can get information on how the individual resources from the currently shown page have been archived. This explains why the replayed site shows mostly links and text. The resource overview below clearly shows that sixteen different resources that were part of the webpage when it was live is not included in your archived version. If you had been working with the complete version of the EOTWA collection the replay would be better as the missing resources are most likely located in some of the many other WARC files available at the End of Term Web Archive.
 
-![Figure 4: Missing resources from Bilirakis website](./img/4_missing_resources.png)
-<!-- {% include figure.html filename="./img/4_missing_resources.png" alt="SolrWayback page resource overview panel listing sixteen resources from the Bilirakis website that were not captured in the archive" caption="Figure 4: Missing resources from Bilirakis website" %} -->
+![Figure 4: Missing resources from Bilirakis website](./img/exploring-archived-web-solrwayback4.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback4.png" alt="SolrWayback page resource overview panel listing sixteen resources from the Bilirakis website that were not captured in the archive" caption="Figure 4: Missing resources from Bilirakis website" %} -->
 
 The search field in SolrWayback supports a multitude of complex search functionalities. They can however be hard to navigate when using the software for the first time. The search box supports the standard query types found in any information retrieval system or library database. This includes traditional use of [Boolean operators](https://en.wikipedia.org/wiki/Boolean_algebra) such as AND, OR, and NOT. They must be entered in uppercase or else the search technology understands them as search terms instead of Boolean operators. To continue the example above, you might be interested in searching for the terms `immigration OR immigrant` to broaden the results from before. This provides you with 180 results compared to the `immigration` query, which only provided 80 results in your subset of the archive. To narrow results instead, use the Boolean operator AND. For example: `immigration AND mexican`, which only returns one result in your very limited corpus. These operators can also be used in combination, but then you would need to use parentheses to group search terms that are related to the individual Boolean operators. Staying with the example of immigration a combined query could look like this: `immigration OR (mexican AND immigrant)`.
 
@@ -163,8 +163,8 @@ The searching strategies above are often available in all sorts of information r
 
 The section above uses the field `content_length` as the primary example of how to query with a field. SolrWayback contains multiple such fields. The quickest way to view them is to run a wildcard query (`*:*`) and then press the `View data fields` button shown below:
 
-![Figure 5: Where to find data fields](./img/5_data_fields.png)
-<!-- {% include figure.html filename="./img/5_data_fields.png" alt="Close-up of the View data fields button located below an entry in the SolrWayback search results list" caption="Figure 5: Where to find data fields" %} -->
+![Figure 5: Where to find data fields](./img/exploring-archived-web-solrwayback5.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback5.png" alt="Close-up of the View data fields button located below an entry in the SolrWayback search results list" caption="Figure 5: Where to find data fields" %} -->
 
 When you press this button, a list of available fields appears. Here you see fields such as `content`, `content_type`, `crawl_date`, `elements_used`, `links` and many more. Most of these fields can be used in queries just as the `content_length` above. These fields can be used in multiple ways to construct very niche searches. For now it is enough to know where to find them for future reference.
 
@@ -183,8 +183,8 @@ Until now, the lesson has been focused on how to search through the search bar. 
 
 If you do a new `*:*`-query and then have a look at the resulting page. Here you get some useful information on the left of the screen. These are facets that give you an overview of content in your collection and they can tailor your search. When a facet is clicked, it will be applied to your query and only documents with that value in the faceted field will be included in the result. 
 
-![Figure 6: SolrWayback facets](./img/6_solrwayback_facets.png)
-<!-- {% include figure.html filename="./img/6_solrwayback_facets.png" alt="Left-hand facet panel in SolrWayback showing filter options for content type, domain, and crawl year" caption="Figure 6: SolrWayback facets" %} -->
+![Figure 6: SolrWayback facets](./img/exploring-archived-web-solrwayback6.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback6.png" alt="Left-hand facet panel in SolrWayback showing filter options for content type, domain, and crawl year" caption="Figure 6: SolrWayback facets" %} -->
 
 Facets can also be used to give an immediate overview of how the material in the collection is scattered on different domains, content types or crawl years etc. One important thing to mention in relation to facets is the relationship between entries in the search bar and the application of facets. Apply facets last as changing the search box input resets the query and removes all applied facets. You have now learned how to search through the search box and make use of the facets for filtering a search result.
 
@@ -196,30 +196,30 @@ The archived website can be navigated in the same manner as a live website. Live
 
 Let's use the Bilirakis website for a thought example of what would happen. Say you were interested in  the congressman's view on education. You would then probably be interested in following the link to his webpage on education. When you click this link you would be presented with a version of the webpage located at this [address](http://bilirakis.house.gov/index.php?option=com_content&task=view&id=187&Itemid=128). You might also have unknowingly shifted time periods. You started from a page archived on 14 May 2009, but the link you followed may point to a version from an entirely different year. Without knowing, you might have time travelled when you clicked the link. The link you clicked on might not have been collected on 14 May 2009. It might not have been collected in 2009 at all. If this is the case and the archive has a version of the requested page from 2008, 2010 or 2015 the playback engine in the software would show the version of the site that is closest in time without telling you that your temporal context has shifted. In SolrWayback and other Wayback based web archives such as the Internet Archive the harvest date can always be extracted from the archival URL. Returning to the Bilirakis front page in your SolrWayback collection which should be available at the following [URL](http://localhost:8080/solrwayback/services/web/20090514061634/http://bilirakis.house.gov/index.php?option=com_search&searchword=index.php?option=com_search&searchword=The%20Congenital%20Heart%20Futures%20Act&submit=Search&searchphrase=any&ordering=newest). The `/web/20090514061634`-part of the URL would also be present if you had accessed the source in the Internet Archive or any other web archive. The 14-digit number is a timestamp in the format YYYYMMDDHHMMSS. When you click a link in SolrWayback this date changes to the version closest to the URL you came from. In SolrWayback harvest date information can also be read in the toolbar accessible in the top left corner of the playback view. 
 
-![Figure 7: Toolbar location](./img/7_toolbar_location.png)
-<!-- {% include figure.html filename="./img/7_toolbar_location.png" alt="Archived webpage playback in SolrWayback with an arrow indicating the toolbar toggle icon in the top left corner" caption="Figure 7: Toolbar location" %} -->
+![Figure 7: Toolbar location](./img/exploring-archived-web-solrwayback7.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback7.png" alt="Archived webpage playback in SolrWayback with an arrow indicating the toolbar toggle icon in the top left corner" caption="Figure 7: Toolbar location" %} -->
 
-![Figure 8: Toolbar content](./img/8_toolbar_content.png)
-<!-- {% include figure.html filename="./img/8_toolbar_content.png" alt="Expanded SolrWayback playback toolbar showing the human-readable harvest date and a summary count of available page resources" caption="Figure 8: Toolbar content" %} -->
+![Figure 8: Toolbar content](./img/exploring-archived-web-solrwayback8.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback8.png" alt="Expanded SolrWayback playback toolbar showing the human-readable harvest date and a summary count of available page resources" caption="Figure 8: Toolbar content" %} -->
 
 The toolbar provides a human readable version of the harvest date and a quick overview of how much material us available on the given page. The time of collection can either be extracted directly from the URL or read in the toolbar. Remember that this timestamp changes when you click a link, because each source was collected individually. This resembles traditional library frameworks, just as the searching capabilities above did.[^8]
 
 When working with vast amounts of sources, which is often the case when working with the archived web it is important to document your methodology and how you found the sources in the first place. This is true for all types of research, however researchers often forget to describe this important methodological part of doing research with born digital or reborn digital sources.[^9] SolrWayback contains a navigation tracking feature, which keeps a record of all the things you do as a user of the software. This navigation history can then be downloaded and used as part of a methodological argument, for transparency of source discovery, or for personal bookkeeping of what sources you have already investigated.[^10] The Navigation History button is available below the search box on the front page of the application.  
 
-![Figure 9: Button for downloading navigation history](./img/9_navigation_history.png)
-<!-- {% include figure.html filename="./img/9_navigation_history.png" alt="The Navigation History download button located below the search box on the SolrWayback front page" caption="Figure 9: Button for downloading navigation history" %} -->
+![Figure 9: Button for downloading navigation history](./img/exploring-archived-web-solrwayback9.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback9.png" alt="The Navigation History download button located below the search box on the SolrWayback front page" caption="Figure 9: Button for downloading navigation history" %} -->
 
 ### Tools for Visualisation
 
 Collections of archived web material are often extremely big. Access to web archive collections should include tools that help researchers navigate large volumes of material.[^11] SolrWayback provides built-in tools for distant reading of archived web material. These tools can be found in the toolbox highlighted below.
 
-![Figure 10: Button for opening the toolbox](./img/10_toolbox_button.png)
-<!-- {% include figure.html filename="./img/10_toolbox_button.png" alt="The toolbox icon button highlighted below the SolrWayback search bar" caption="Figure 10: Button for opening the toolbox" %} -->
+![Figure 10: Button for opening the toolbox](./img/exploring-archived-web-solrwayback10.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback10.png" alt="The toolbox icon button highlighted below the SolrWayback search bar" caption="Figure 10: Button for opening the toolbox" %} -->
 
 The following section provides a brief overview of how these tools can be used to explore your collection. To make sure you can follow along, please make a query for everything: `*:*`. Now press the toolbar icon and you will be given the following screen:
 
-![Figure 11: View of the SolrWayback toolbox](./img/11_toolbox_content.png)
-<!-- {% include figure.html filename="./img/11_toolbox_content.png" alt="SolrWayback toolbox panel listing five tools: Wordcloud, Link Graph, Domain stats, Link graph Gephi export, and Ngram Netarchive, each with an input field" caption="Figure 11: View of the SolrWayback toolbox" %} -->
+![Figure 11: View of the SolrWayback toolbox](./img/exploring-archived-web-solrwayback11.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback11.png" alt="SolrWayback toolbox panel listing five tools: Wordcloud, Link Graph, Domain stats, Link graph Gephi export, and Ngram Netarchive, each with an input field" caption="Figure 11: View of the SolrWayback toolbox" %} -->
 
 The toolbox currently contains five different tools:
 - Wordcloud
@@ -230,25 +230,25 @@ The toolbox currently contains five different tools:
 
 All input boxes contain an example text of kb.dk. In all steps below, this needs to be changed to a domain that is available in your small corpus. Most the time the lesson will use nasa.gov as the example here. The wordcloud tool generates domain wide wordclouds. These wordclouds can provide an overview of what is the most used words across a specific domain. To see an example of how this looks enter `nasa.gov` in the field to the left and press `Create wordcloud`. This compiles a wordcloud of the most used terms across the nasa.gov domain in you collection.
 
-![Figure 12: Example wordcloud of nasa.gov](./img/12_wordcloud_example.png)
-<!-- {% include figure.html filename="./img/12_wordcloud_example.png" alt="Word cloud visualisation showing the most frequently occurring terms across the nasa.gov domain, with larger words indicating higher frequency" caption="Figure 12: Example wordcloud of nasa.gov" %} -->
+![Figure 12: Example wordcloud of nasa.gov](./img/exploring-archived-web-solrwayback12.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback12.png" alt="Word cloud visualisation showing the most frequently occurring terms across the nasa.gov domain, with larger words indicating higher frequency" caption="Figure 12: Example wordcloud of nasa.gov" %} -->
 
 The next tool, the link graph tool is central if you want to understand or investigate the linked nature of the web. Network analysis can be used for exploring how parts of the collection refer to other parts but are not as accurate as link analysis of the live web.[^12] Please press the `Link Graph`-tool in the top of the lesson and then input nasa.gov into the input field. Make sure that link direction is set to outgoing before you press generate. 
 
-![Figure 13: Example linkgraph of nasa.gov](./img/13_linkgraph_example.png)
-<!-- {% include figure.html filename="./img/13_linkgraph_example.png" alt="Network graph showing outgoing links from nasa.gov to other domains, with nodes representing domains and edges representing hyperlinks" caption="Figure 13: Example linkgraph of nasa.gov" %} -->
+![Figure 13: Example linkgraph of nasa.gov](./img/exploring-archived-web-solrwayback13.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback13.png" alt="Network graph showing outgoing links from nasa.gov to other domains, with nodes representing domains and edges representing hyperlinks" caption="Figure 13: Example linkgraph of nasa.gov" %} -->
 
 What you see here are the domains, that are linked to from webpages on nasa.gov. It is also possible to produce a graph of ingoing links, which is often a more complex task, but because SolrWayback already has this information available through its index the graph can be constructed easily. To produce such a graph you toggle the radio button to ingoing and press generate again. However, for nasa.gov in your collection, this produces a meaningless graph with no edges. If you change the domain from nasa.gov to wikipedia.org you can get a feel of how a graph of ingoing links look. This link graph tool provides an accessible entrypoint to getting started with link analysis of archived web material. For more complex link analysis the tool Link graph Gephi export can export needed data for complex analysis with the network analysis tool Gephi. For an introduction to network analysis in general see the Programming Historian lesson by Ladd et al. 2017.[^13]
 
 Next in line is the domain stats tool. This tool visualises statistics about a single domain at different levels of granularity. To get an understanding of how this tool works enter nasa.gov in the input box. The X-axis defaults to the years 1998 to 2027. This can be changed in the two timeframe boxes. The scale of the X-axis can also be customised down to daily intervals. When you press the generate button a combined line chart appears. This combined chart visualises four distinct counts: Amount of pages, ingoing links, average page size in characters, and size in kilobytes. In this combined view it is possible to remove individual line charts by clicking their respective colors at the top of the visualisation. It is also possible to render all four charts individually by pressing the `Show Individual Charts`-button. The domain statistics can be used to investigate temporal changes in the archived material. Your subset from the total collection are all collected on the same day in 2009 and therefore there is not enough datapoints to create a telling visualisation. An example of how the graph could look with more data is shown here.
 
-![Figure 14: Example of visualising domain stats from a much bigger collection](./img/14_domainstats_example.png)
-<!-- {% include figure.html filename="./img/14_domainstats_example.png" alt="Combined line chart from the domain stats tool showing four metrics over time: number of pages, ingoing links, average page size in characters, and size in kilobytes" caption="Figure 14: Example of visualising domain stats from a much bigger collection" %} -->
+![Figure 14: Example of visualising domain stats from a much bigger collection](./img/exploring-archived-web-solrwayback14.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback14.png" alt="Combined line chart from the domain stats tool showing four metrics over time: number of pages, ingoing links, average page size in characters, and size in kilobytes" caption="Figure 14: Example of visualising domain stats from a much bigger collection" %} -->
 
 The last tool in the toolbox is the Ngram Netarchive tool. This tool can discover and investigate how frequently a term appears in the collection over time. Multiple terms can be shown on the same graph at once by searching for them individually. For instance, staying in the space program example, you can add terms such as `nasa`, `space`, and `astronaut` to the visualisation and if you then had material from multiple years, the visualisation would represent how often the words were present in the collection. 
 
-![Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection](./img/15_ngram_example.png)
-<!-- {% include figure.html filename="./img/15_ngram_example.png" alt="Ngram line chart showing the relative frequency of the search terms nasa, space, and astronaut across the collection over time" caption="Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection" %} -->
+![Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection](./img/exploring-archived-web-solrwayback15.png)
+<!-- {% include figure.html filename="exploring-archived-web-solrwayback15.png" alt="Ngram line chart showing the relative frequency of the search terms nasa, space, and astronaut across the collection over time" caption="Figure 15: Example of an Ngram search for the words 'nasa', 'space', and 'astronaut' across your collection" %} -->
 
 This type of visualisation investigates trends in usage of different words. Collections from web archives are very strictly bound to the collecting practices of holding institutions such as the Internet Archive or the Royal Danish Library. This means that spikes in these visualisations needs to be treated with care as they can just as easily be a product of excessive collecting of material as actual markers of change.
 
