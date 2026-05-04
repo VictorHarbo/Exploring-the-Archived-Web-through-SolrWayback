@@ -1,21 +1,3 @@
-# Programming Historian English Language Lesson Template
-
-This file can be used as a template for writing your lesson. It includes information and guidelines on formatting which supplement but do not replace the author's guidelines (/en/author-guidelines)
-
-## Some Important Reminders:
-
-*	Tutorials should not exceed 8,000 words (including code).
-*	Keep your tone formal but accessible.
-*	Talk to your reader in the second person (you).
-*	Adopt a widely-used version of English (British, Canadian, Indian, South African etc).
-*	The piece of writing is a "tutorial" or a "lesson" and not an "article".
-*  Adopt open source principles
-*  Write for a global audience
-*  Write sustainably
-
-# Lesson Metadata
-
-**Delete everything above this line when ready to submit your lesson**.
 
 ---
 title: Exploring the Archived Web with SolrWayback  
