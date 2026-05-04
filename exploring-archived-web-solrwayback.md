@@ -57,7 +57,7 @@ Archived web presents an enormous potential in terms of research data. But acces
 
 ## Introduction
 
-TODO: Write a broader introduction to archived web as a source.
+The World Wide Web has existed for more than 30 years now and in this period it has transformed how people communicate and interact with each other radically. The live web, however, is ephemeral and not available in its earlier versions, but much of the material that have been available on the web is archived by web archiving institutions. The archived web is an unprecedented rich primary source for investigating the histories of the 1990's and 2000's but historians have been reluctant to engage with the material.[^17] This lesson will introduce you to working with material from the archived web on your personal computer.
 
 When institutions such as the Internet Archive (IA), the Royal Danish Library (RDL) or the Bibliothèque nationale de France (BnF) archive the internet, they store the data in [WARC files](https://en.wikipedia.org/wiki/WARC_(file_format)). WARC files can be daunting to work with if you have not seen them before, as they are archival and technical by nature.[^1] Their primary objective is to ensure that the archived web can be saved for posterity and therefore prioritize effective long-term preservation above usability. This lesson teaches a method to unlock the potential of WARC files as a source for research. To do this, the lesson introduces the open-source software SolrWayback.
 
@@ -290,10 +290,12 @@ Maemura, Emily. ‘All WARC and No Playback: The Materialities of Data-Centered 
 
 Milligan, Ian, and James Baker. ‘Introduction to the Bash Command Line’. Programming Historian, 20 September 2014. https://programminghistorian.org/en/lessons/intro-to-bash.
 
-
 Putnam, Lara. ‘The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast’. The American Historical Review (Oxford) 121, no. 2 (2016): 377–402. https://doi.org/10.1093/ahr/121.2.377.
 
 Ruest, Nick, Samantha Fritz, and Ian Milligan. ‘Creating Order from the Mess: Web Archive Derivative Datasets and Notebooks’. Archives and Records 43, no. 3 (2022): 316–31. https://doi.org/10.1080/23257962.2022.2100336.
+
+Winters, Jane. ‘Breaking in to the Mainstream: Demonstrating the Value of Internet (and Web) Histories’. Internet Histories 1, nos 1–2 (2017): 173–79. https://doi.org/10.1080/24701475.2017.1305713.
+
 
 
 ##### Endnotes
@@ -328,6 +330,8 @@ Ruest, Nick, Samantha Fritz, and Ian Milligan. ‘Creating Order from the Mess: 
 [^15]: Ian Milligan and James Baker, ‘Introduction to the Bash Command Line’, Programming Historian, 20 September 2014, https://programminghistorian.org/en/lessons/intro-to-bash.
 
 [^16]: Andy Jackson et al., WARC Indexer, Zenodo, released 8 January 2026, https://doi.org/10.5281/zenodo.18183416.
+
+[^17]: Jane Winters, ‘Breaking in to the Mainstream: Demonstrating the Value of Internet (and Web) Histories’, Internet Histories 1, (2017): 173–79, https://doi.org/10.1080/24701475.2017.1305713.
 
 
 
