@@ -83,7 +83,7 @@ Extracting WARC files from this archive is challenging — their documentation i
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060400-01090-dp01.cdlib.org.warc.gz
 - https://eotarchive.s3.amazonaws.com/crawl-data/EOT-2008/segments/CDL-004/warc/CDL-20090514060442-00040-dp01.cdlib.org.warc.gz
 
-For now, save these files in their own directory or leave them in your Downloads folder. You need to be able to find them again when you get to the section of the lesson that handles indexing.
+For now, save these files in their own directory or leave them in your Downloads folder. You need to be able to find them again when you get to the section of the lesson that handles indexing. It is possible to complete the lesson with fewer WARC files downloaded. Keep in mind that the lesson uses all six files. If you choose to use fewer files the data available for you is not the same as the examples in this lesson. This means that you might not get the same results when following the lesson.
 
 ## Download
 To get started with SolrWayback, first download the software from the SolrWayback GitHub page. The software can be installed in multiple ways, however in this lesson you will install it through the bundle release version, which is the most common way. To get started navigate to the [release page](https://github.com/netarchivesuite/solrwayback/releases) of SolrWayback and download version 5.4.2 (This was the newest version when this lesson was written. This lesson will most likely work for newer versions as well).
